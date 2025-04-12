@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLANC & CO - Experiencia Personalizada</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#111111',
+                        'brand-light': '#f8f8f8',
+                    },
+                    maxWidth: {
+                        'content': '1280px',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .slide-indicators button.active {
+            width: 2rem;
+            background-color: white;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="bg-brand-dark text-white">
+        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-xl font-bold">BLANC & CO</div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-white hover:text-gray-300 text-sm">Inicio</a>
+                    <a href="#" class="text-white hover:text-gray-300 text-sm">Nosotros</a>
+                    <a href="#" class="text-white hover:text-gray-300 text-sm">Productos</a>
+                    <a href="#" class="text-white hover:text-gray-300 text-sm">Servicios</a>
+                    <a href="#" class="text-white hover:text-gray-300 text-sm">Contacto</a>
+                </nav>
+                <button class="md:hidden text-white">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-brand-dark text-white relative">
+        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="z-10">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
+                        Vive una experiencia personalizada, cómoda y sensorial, donde tu sonrisa es la protagonista
+                    </h1>
+                    <p class="mb-8 text-gray-300">
+                        Ofrecemos la mejor atención para tu sonrisa. Nuestro equipo de profesionales está comprometido con brindarte un servicio de calidad y personalizado para que luzcas una sonrisa radiante.
+                    </p>
+                    <button class="bg-white text-brand-dark px-6 py-3 rounded-full font-medium hover:bg-gray-200 transition">
+                        Conocer más
+                    </button>
+                </div>
+                <div class="relative hidden md:block">
+                    <!-- This would be the hero image -->
+                    <div class="aspect-[3/4] bg-gray-700 rounded-lg overflow-hidden">
+                        <img src="/placeholder.svg?height=600&width=450" alt="Sonrisa perfecta" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slider indicators -->
+            <div class="slide-indicators flex justify-center space-x-2 mt-8" x-data="{active: 0}">
+                <button @click="active = 0" :class="{'active': active === 0}" class="h-1 w-4 bg-gray-500 rounded-full transition-all"></button>
+                <button @click="active = 1" :class="{'active': active === 1}" class="h-1 w-4 bg-gray-500 rounded-full transition-all"></button>
+                <button @click="active = 2" :class="{'active': active === 2}" class="h-1 w-4 bg-gray-500 rounded-full transition-all"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands/Partners Section -->
+    <section class="bg-gray-100 py-8">
+        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm text-gray-500 mb-6">LAS MEJORES MARCAS CONFÍAN EN NOSOTROS - MARCAS DE CALIDAD</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <div class="text-gray-400 font-semibold">BRAND 1</div>
+                <div class="text-gray-400 font-semibold">BRAND 2</div>
+                <div class="text-gray-400 font-semibold">BRAND 3</div>
+                <div class="text-gray-400 font-semibold">BRAND 4</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16">
+        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Descubre el poder detrás de tu sonrisa</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <p class="text-gray-600">
+                    En BLANC & CO, nos dedicamos a transformar sonrisas y vidas. Nuestro enfoque personalizado garantiza que cada tratamiento se adapte perfectamente a tus necesidades y deseos. Utilizamos tecnología de vanguardia y técnicas innovadoras para ofrecerte resultados excepcionales con la máxima comodidad.
+                </p>
+                <p class="text-gray-600">
+                    Nuestro equipo de profesionales altamente capacitados está comprometido con tu bienestar y satisfacción. Te acompañamos en cada paso del camino, asegurándonos de que te sientas cómodo y confiado durante todo el proceso.
+                </p>
+            </div>
+
+            <!-- Image Gallery -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+                <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Servicio 1" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Servicio 2" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Servicio 3" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Servicio 4" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="feature">
+                    <h3 class="text-lg font-semibold mb-2">Resultados excepcionales</h3>
+                    <p class="text-gray-600 text-sm">
+                        Nuestros tratamientos están diseñados para brindarte resultados visibles y duraderos, transformando tu sonrisa y aumentando tu confianza.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h3 class="text-lg font-semibold mb-2">Tecnología avanzada</h3>
+                    <p class="text-gray-600 text-sm">
+                        Utilizamos equipos de última generación y técnicas innovadoras para garantizar tratamientos eficaces, cómodos y de alta calidad.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h3 class="text-lg font-semibold mb-2">Tratamientos personalizados</h3>
+                    <p class="text-gray-600 text-sm">
+                        Cada sonrisa es única, por eso diseñamos planes de tratamiento adaptados a tus necesidades específicas y objetivos estéticos.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h3 class="text-lg font-semibold mb-2">Experiencia confortable</h3>
+                    <p class="text-gray-600 text-sm">
+                        Priorizamos tu comodidad en cada visita, creando un ambiente relajante y utilizando técnicas que minimizan las molestias durante los tratamientos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="bg-brand-dark text-white py-16">
+        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative aspect-video bg-gray-800 rounded-lg mb-8 flex items-center justify-center">
+                <button class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-play text-white text-xl"></i>
+                </button>
+            </div>
+            <p class="text-center text-sm md:text-base max-w-3xl mx-auto">
+                Conoce más sobre nuestra clínica dental y cómo transformamos sonrisas a diario. En este video, te mostramos nuestras instalaciones, el equipo de profesionales y los tratamientos que ofrecemos. Descubre por qué somos la mejor opción para el cuidado de tu sonrisa y cómo podemos ayudarte a lograr la sonrisa que siempre has deseado.
+            </p>
+            <div class="flex justify-center mt-8">
+                <button class="border border-white rounded-full px-6 py-2 text-sm flex items-center gap-2 hover:bg-white hover:text-brand-dark transition">
+                    Pedir cita ahora
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Nos dedicamos a hacerte parte de tu luminar sonrisa</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Pricing Card 1 -->
+                <div class="col-span-1">
+                    <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden mb-4">
+                        <img src="/placeholder.svg?height=400&width=400" alt="Plan Básico" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <!-- Pricing Details -->
+                <div class="col-span-1 md:col-span-2">
+                    <p class="text-gray-600 mb-8">
+                        Nuestros planes están diseñados para adaptarse a tus necesidades específicas. Ofrecemos diferentes opciones que se ajustan a distintos presupuestos y requerimientos, garantizando siempre la máxima calidad en cada uno de nuestros servicios.
+                    </p>
+                    
+                    <!-- Accordion for pricing plans -->
+                    <div x-data="{selected:null}">
+                        <div class="mb-4">
+                            <button 
+                                @click="selected !== 1 ? selected = 1 : selected = null"
+                                class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
+                            >
+                                <span class="font-semibold">Preparación inicial Zoom</span>
+                                <i class="fa-solid" :class="selected === 1 ? 'fa-minus' : 'fa-plus'"></i>
+                            </button>
+                            <div x-show="selected === 1" class="p-4 bg-gray-50">
+                                <p>Nuestro plan inicial incluye una evaluación completa, limpieza profesional y preparación para el tratamiento Zoom de blanqueamiento. Precio: $99</p>
+                                <ul class="mt-2 list-disc list-inside">
+                                    <li>Evaluación dental completa</li>
+                                    <li>Limpieza profesional</li>
+                                    <li>Preparación para blanqueamiento</li>
+                                    <li>Consulta personalizada</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <button 
+                                @click="selected !== 2 ? selected = 2 : selected = null"
+                                class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
+                            >
+                                <span class="font-semibold">Blanqueamiento Premium</span>
+                                <i class="fa-solid" :class="selected === 2 ? 'fa-minus' : 'fa-plus'"></i>
+                            </button>
+                            <div x-show="selected === 2" class="p-4 bg-gray-50">
+                                <p>Nuestro tratamiento premium de blanqueamiento dental para resultados excepcionales y duraderos. Precio: $299</p>
+                                <ul class="mt-2 list-disc list-inside">
+                                    <li>Tratamiento Zoom completo</li>
+                                    <li>Kit de mantenimiento para casa</li>
+                                    <li>Seguimiento personalizado</li>
+                                    <li>Garantía de resultados</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-2">Answering your questions</h2>
+                <p class="text-gray-600">Find answers to the most common questions about our services</p>
+            </div>
+            
+            <!-- FAQ Accordion -->
+            <div class="max-w-3xl mx-auto" x-data="{selected:null}">
+                <div class="mb-4">
+                    <button 
+                        @click="selected !== 1 ? selected = 1 : selected = null"
+                        class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
+                    >
+                        <span class="font-semibold">What services do you provide?</span>
+                        <i class="fa-solid" :class="selected === 1 ? 'fa-minus' : 'fa-plus'"></i>
+                    </button>
+                    <div x-show="selected === 1" class="p-4 bg-gray-50">
+                        <p>We offer a comprehensive range of dental services including cosmetic dentistry, teeth whitening, dental implants, orthodontics, and general dental care. Our team of experts is dedicated to providing personalized care tailored to your specific needs.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <button 
+                        @click="selected !== 2 ? selected = 2 : selected = null"
+                        class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
+                    >
+                        <span class="font-semibold">How long does a typical treatment take?</span>
+                        <i class="fa-solid" :class="selected === 2 ? 'fa-minus' : 'fa-plus'"></i>
+                    </button>
+                    <div x-show="selected === 2" class="p-4 bg-gray-50">
+                        <p>Treatment duration varies depending on the specific procedure and individual needs. A teeth whitening session typically takes about 60-90 minutes, while more complex treatments like dental implants may require multiple visits over several months.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <button 
+                        @click="selected !== 3 ? selected = 3 : selected = null"
+                        class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
+                    >
+                        <span class="font-semibold">Do you offer free consultations?</span>
+                        <i class="fa-solid" :class="selected === 3 ? 'fa-minus' : 'fa-plus'"></i>
+                    </button>
+                    <div x-show="selected === 3" class="p-4 bg-gray-50">
+                        <p>Yes, we offer free initial consultations for new patients. During this consultation, our specialists will evaluate your dental health, discuss your goals, and recommend the most suitable treatment options for you.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <button 
+                        @click="selected !== 4 ? selected = 4 : selected = null"
+                        class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
+                    >
+                        <span class="font-semibold">Will I need ongoing care after my treatment?</span>
+                        <i class="fa-solid" :class="selected === 4 ? 'fa-minus' : 'fa-plus'"></i>
+                    </button>
+                    <div x-show="selected === 4" class="p-4 bg-gray-50">
+                        <p>Most treatments benefit from follow-up care to maintain results. We provide detailed aftercare instructions and recommend regular check-ups to ensure the longevity of your treatment results and overall dental health.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <button 
+                        @click="selected !== 5 ? selected = 5 : selected = null"
+                        class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
+                    >
+                        <span class="font-semibold">Can I pay in installments for my treatment?</span>
+                        <i class="fa-solid" :class="selected === 5 ? 'fa-minus' : 'fa-plus'"></i>
+                    </button>
+                    <div x-show="selected === 5" class="p-4 bg-gray-50">
+                        <p>Yes, we offer flexible payment plans to make our treatments more accessible. Our team will work with you to find a payment solution that fits your budget while allowing you to receive the care you need.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <button 
+                        @click="selected !== 6 ? selected = 6 : selected = null"
+                        class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
+                    >
+                        <span class="font-semibold">How can I get started with my smile?</span>
+                        <i class="fa-solid" :class="selected === 6 ? 'fa-minus' : 'fa-plus'"></i>
+                    </button>
+                    <div x-show="selected === 6" class="p-4 bg-gray-50">
+                        <p>Getting started is easy! Simply book a consultation through our website or by calling our office. During your first visit, we'll discuss your goals, evaluate your dental health, and create a personalized treatment plan to achieve your dream smile.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-brand-dark text-white py-16">
+        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <p class="text-sm uppercase tracking-wider mb-2">BLANC & CO</p>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Centro de Blanqueamiento de Barrio Salamanca</h2>
+                <p class="max-w-2xl mx-auto">
+                    Nos especializamos en tratamientos de blanqueamiento dental de alta calidad. Nuestro equipo de profesionales está comprometido con brindarte la mejor experiencia y resultados excepcionales. Visítanos y descubre cómo podemos transformar tu sonrisa.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Pricing Card 1 -->
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                    <div class="mb-2 text-xs uppercase tracking-wider">PLAN 1</div>
+                    <h3 class="text-xl font-bold mb-4">Plan Básico</h3>
+                    <p class="text-gray-300 mb-4">
+                        Nuestro plan básico incluye una sesión de blanqueamiento profesional y un kit de mantenimiento para el hogar.
+                    </p>
+                    <ul class="mb-6 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-check mr-2"></i>
+                            <span>1 sesión de blanqueamiento</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-check mr-2"></i>
+                            <span>Kit de mantenimiento básico</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-check mr-2"></i>
+                            <span>Consulta inicial</span>
+                        </li>
+                    </ul>
+                    <button class="bg-white text-brand-dark px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition w-full">
+                        Reservar cita
+                    </button>
+                </div>
+                
+                <!-- Pricing Card 2 -->
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                    <div class="mb-2 text-xs uppercase tracking-wider">PLAN 2</div>
+                    <h3 class="text-xl font-bold mb-4">Plan Premium</h3>
+                    <p class="text-gray-300 mb-4">
+                        Nuestro plan premium incluye múltiples sesiones de blanqueamiento y un kit completo de mantenimiento.
+                    </p>
+                    <ul class="mb-6 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-check mr-2"></i>
+                            <span>3 sesiones de blanqueamiento</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-check mr-2"></i>
+                            <span>Kit de mantenimiento premium</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-check mr-2"></i>
+                            <span>Consultas de seguimiento</span>
+                        </li>
+                    </ul>
+                    <button class="bg-white text-brand-dark px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition w-full">
+                        Reservar cita
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-8">
+        <div class="max-w-content mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4">
+                <div class="aspect-square bg-gray-200 overflow-hidden">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Galería 1" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square bg-gray-200 overflow-hidden">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Galería 2" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square bg-gray-200 overflow-hidden">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Galería 3" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square bg-gray-200 overflow-hidden">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Galería 4" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h2 class="text-2xl font-bold mb-4">Contacta con nosotros</h2>
+                    <p class="text-gray-600 mb-8">
+                        Estamos aquí para responder a todas tus preguntas. Completa el formulario y nos pondremos en contacto contigo lo antes posible.
+                    </p>
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400"></textarea>
+                        </div>
+                        <button type="submit" class="bg-brand-dark text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition">
+                            Enviar mensaje
+                        </button>
+                    </form>
+                </div>
+                <div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm h-full">
+                        <h3 class="text-xl font-bold mb-4">Información de contacto</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold mb-1">Dirección</h4>
+                                <p class="text-gray-600">Calle Serrano 45, Barrio Salamanca, Madrid</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Teléfono</h4>
+                                <p class="text-gray-600">+34 91 123 45 67</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Email</h4>
+                                <p class="text-gray-600">info@blancandco.com</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Horario</h4>
+                                <p class="text-gray-600">Lunes a Viernes: 9:00 - 20:00</p>
+                                <p class="text-gray-600">Sábados: 10:00 - 14:00</p>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="font-semibold mb-2">Síguenos</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-gray-600 hover:text-brand-dark">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-brand-dark">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-brand-dark">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-12">
+        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4">BLANC & CO</div>
+                    <p class="text-gray-400 mb-4">
+                        Centro especializado en blanqueamiento dental y cuidado de la sonrisa en el corazón de Madrid.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Enlaces rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Inicio</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Servicios</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Sobre nosotros</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contacto</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-location-dot mt-1 mr-2"></i>
+                            <span class="text-gray-400">Calle Serrano 45, Barrio Salamanca, Madrid</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-phone mt-1 mr-2"></i>
+                            <span class="text-gray-400">+34 91 123 45 67</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-envelope mt-1 mr-2"></i>
+                            <span class="text-gray-400">info@blancandco.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2023 BLANC & CO. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add placeholder for Font Awesome -->
+    <script>
+        // Font Awesome will be added later
+        // This is just a placeholder for the icons
+        document.addEventListener('alpine:init', () => {
+            // Alpine.js initialization
+        });
+    </script>
+</body>
+</html>
