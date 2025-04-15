@@ -3,47 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLANC & CO - Experiencia Personalizada</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>BLANC & CO - Blanqueamiento dental Profesional</title>
+    <link href="/src/output.min.css" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-dark': '#111111',
-                        'brand-light': '#f8f8f8',
-                    },
-                    maxWidth: {
-                        'content': '1280px',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-        body {
-            font-family: 'Montserrat', sans-serif;
-        }
-        .slide-indicators button.active {
-            width: 2rem;
-            background-color: white;
-        }
-    </style>
+    <script  src="https://kit.fontawesome.com/2cffdde700.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/itx4sae.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+    <script src="https://kit.fontawesome.com/8634ad19e3.js" crossorigin="anonymous"></script> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body class="bg-white text-gray-800">
     <!-- Header/Navigation -->
-    <header class="bg-brand-dark text-white">
-        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="text-xl font-bold">BLANC & CO</div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#" class="text-white hover:text-gray-300 text-sm">Inicio</a>
-                    <a href="#" class="text-white hover:text-gray-300 text-sm">Nosotros</a>
-                    <a href="#" class="text-white hover:text-gray-300 text-sm">Productos</a>
-                    <a href="#" class="text-white hover:text-gray-300 text-sm">Servicios</a>
-                    <a href="#" class="text-white hover:text-gray-300 text-sm">Contacto</a>
+    <header class="bg-black text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-8">
+                <div class="text-xl font-bold"><img src="src/images/blanccco-logo.svg" alt=" Blanc & Co Logo SVG"></div>
+                <nav class="hidden md:flex space-x-8 text-lg">
+                    <a href="#" class="text-white hover:text-gray-300 ">Inicio</a>
+                    <a href="#" class="text-white hover:text-gray-300">Nosotros</a>
+                    <a href="#" class="text-white hover:text-gray-300">Productos</a>
+                    <a href="#" class="text-white hover:text-gray-300">Servicios</a>
+                    <a href="#" class="text-white hover:text-gray-300">Contacto</a>
                 </nav>
                 <button class="md:hidden text-white">
                     <i class="fa-solid fa-bars"></i>
@@ -53,54 +35,56 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-brand-dark text-white relative">
-        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+    <section class="bg-black text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div class="z-10">
-                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
+                    <h1 class="text-3xl md:text-4xl lg:text-6xl font-medium mb-4">
                         Vive una experiencia personalizada, cómoda y sensorial, donde tu sonrisa es la protagonista
                     </h1>
-                    <p class="mb-8 text-gray-300">
-                        Ofrecemos la mejor atención para tu sonrisa. Nuestro equipo de profesionales está comprometido con brindarte un servicio de calidad y personalizado para que luzcas una sonrisa radiante.
+                    <p class="mb-4 text-gray-300 text-xl mt-4">
+                        Utilizamos la más alta tecnología del mercado, incluyendo el reconocido sistema Philips Zoom, para garantizar resultados visibles desde la primera sesión y una blancura que realmente se nota.
                     </p>
-                    <button class="bg-white text-brand-dark px-6 py-3 rounded-full font-medium hover:bg-gray-200 transition">
-                        Conocer más
+                    <button class="bg-mint text-black px-6 py-3 rounded-full  hover:bg-gray-200 transition text-xl">
+                        Reservar cita <i class="fa-light fa-arrow-up-right"></i>
                     </button>
                 </div>
                 <div class="relative hidden md:block">
                     <!-- This would be the hero image -->
                     <div class="aspect-[3/4] bg-gray-700 rounded-lg overflow-hidden">
-                        <img src="/placeholder.svg?height=600&width=450" alt="Sonrisa perfecta" class="w-full h-full object-cover">
+                        <img src="src/images/blanqueamiento_main.webp" alt="Sonrisa perfecta" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
             
-            <!-- Slider indicators -->
+            <!-- Slider indicators 
             <div class="slide-indicators flex justify-center space-x-2 mt-8" x-data="{active: 0}">
                 <button @click="active = 0" :class="{'active': active === 0}" class="h-1 w-4 bg-gray-500 rounded-full transition-all"></button>
                 <button @click="active = 1" :class="{'active': active === 1}" class="h-1 w-4 bg-gray-500 rounded-full transition-all"></button>
                 <button @click="active = 2" :class="{'active': active === 2}" class="h-1 w-4 bg-gray-500 rounded-full transition-all"></button>
-            </div>
+            </div>-->
         </div>
     </section>
 
     <!-- Brands/Partners Section -->
-    <section class="bg-gray-100 py-8">
-        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-sm text-gray-500 mb-6">LAS MEJORES MARCAS CONFÍAN EN NOSOTROS - MARCAS DE CALIDAD</p>
+    <section class="py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm text-gray-500 mb-6 text-lg">Sólo trabajamos con tecnología y marcas de primera</p>
             <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-                <div class="text-gray-400 font-semibold">BRAND 1</div>
-                <div class="text-gray-400 font-semibold">BRAND 2</div>
-                <div class="text-gray-400 font-semibold">BRAND 3</div>
-                <div class="text-gray-400 font-semibold">BRAND 4</div>
+                <div class=""><img src="src/images/Logos/biofilm-therapy.webp" alt=""></div>
+                <div class=""><img src="src/images/Logos/ems-airflow.webp" alt=""></div>
+                <div class=""><img src="src/images/Logos/ivoclar-vivadent.webp" alt=""></div>
+                <div class=""><img src="src/images/Logos/philips-zoom.webp" alt=""></div>
+                <div class=""><img src="src/images/Logos/relief-acp-logo.webp" alt=""></div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
     <section class="py-16">
-        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-4">Descubre el poder detrás de tu sonrisa</h2>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <span class="inline-block bg-black rounded-full text-white px-4">Acerca del tratamiento</span>
+            <h2 class="text-2xl md:text-3xl my-4">Descubre el poder detrás de tu sonrisa</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 <p class="text-gray-600">
                     En BLANC & CO, nos dedicamos a transformar sonrisas y vidas. Nuestro enfoque personalizado garantiza que cada tratamiento se adapte perfectamente a tus necesidades y deseos. Utilizamos tecnología de vanguardia y técnicas innovadoras para ofrecerte resultados excepcionales con la máxima comodidad.
@@ -111,43 +95,50 @@
             </div>
 
             <!-- Image Gallery -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
-                <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
-                    <img src="/placeholder.svg?height=300&width=300" alt="Servicio 1" class="w-full h-full object-cover">
+            <div class="flex flex-nowrap gap-x-2 overflow-x-scroll justify-start py-8">
+                <div class="aspect-3/4 bg-gray-200 rounded-lg overflow-hidden min-w-xs max-w-xs h-xs">
+                    <img-comparison-slider>
+                        <img slot="first" src="src/images/before.webp" />
+                        <img slot="second" src="src/images/after.webp" />
+                    </img-comparison-slider>
                 </div>
-                <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+                <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden min-w-xs max-w-xs h-xs">
                     <img src="/placeholder.svg?height=300&width=300" alt="Servicio 2" class="w-full h-full object-cover">
                 </div>
-                <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+                <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden min-w-xs max-w-xs h-xs">
                     <img src="/placeholder.svg?height=300&width=300" alt="Servicio 3" class="w-full h-full object-cover">
                 </div>
-                <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+                <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden min-w-xs max-w-xs h-xs">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Servicio 4" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden min-w-xs max-w-xs h-xs">
                     <img src="/placeholder.svg?height=300&width=300" alt="Servicio 4" class="w-full h-full object-cover">
                 </div>
             </div>
 
             <!-- Features Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-4">
                 <div class="feature">
-                    <h3 class="text-lg font-semibold mb-2">Resultados excepcionales</h3>
+                    <h3 class="text-xl mb-2">Resultados excepcionales</h3>
                     <p class="text-gray-600 text-sm">
-                        Nuestros tratamientos están diseñados para brindarte resultados visibles y duraderos, transformando tu sonrisa y aumentando tu confianza.
+                        Obtén resultados visibles de blanqueamiento dental en tan solo una 
+                        sesión de 45 minutos. Aclara hasta 8 tonos en la 
+                        escala VITA con tecnología profesional aprobada.
                     </p>
                 </div>
                 <div class="feature">
-                    <h3 class="text-lg font-semibold mb-2">Tecnología avanzada</h3>
-                    <p class="text-gray-600 text-sm">
-                        Utilizamos equipos de última generación y técnicas innovadoras para garantizar tratamientos eficaces, cómodos y de alta calidad.
+                    <h3 class="text-xl mb-2">Protege y respeta tu esmalte.</h3>
+                    <p class="text-gray-600 text-sm">Nuestro tratamiento de blanqueamiento dental es seguro, no invasivo y preserva el esmalte, cuidando la salud bucal mientras mejora la estética de tu sonrisa.
                     </p>
                 </div>
                 <div class="feature">
-                    <h3 class="text-lg font-semibold mb-2">Tratamientos personalizados</h3>
+                    <h3 class="text-xl mb-2">Sensibilidad mínima o nula.</h3>
                     <p class="text-gray-600 text-sm">
                         Cada sonrisa es única, por eso diseñamos planes de tratamiento adaptados a tus necesidades específicas y objetivos estéticos.
                     </p>
                 </div>
                 <div class="feature">
-                    <h3 class="text-lg font-semibold mb-2">Experiencia confortable</h3>
+                    <h3 class="text-xl mb-2">Experiencia confortable</h3>
                     <p class="text-gray-600 text-sm">
                         Priorizamos tu comodidad en cada visita, creando un ambiente relajante y utilizando técnicas que minimizan las molestias durante los tratamientos.
                     </p>
@@ -157,52 +148,175 @@
     </section>
 
     <!-- Video Section -->
-    <section class="bg-brand-dark text-white py-16">
-        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="relative aspect-video bg-gray-800 rounded-lg mb-8 flex items-center justify-center">
-                <button class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                    <i class="fa-solid fa-play text-white text-xl"></i>
+    <section class="bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative aspect-video bg-[url(/src/images/blanc_clean.webp)] bg-cover bg-center rounded-lg mb-8 flex items-center justify-center">
+                <button class="w-24 h-24 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
+                    <i class=" text-4xl fa-solid fa-play"></i>
                 </button>
             </div>
-            <p class="text-center text-sm md:text-base max-w-3xl mx-auto">
+            <p class="text-center text-2xl! max-w-3xl mx-auto">
                 Conoce más sobre nuestra clínica dental y cómo transformamos sonrisas a diario. En este video, te mostramos nuestras instalaciones, el equipo de profesionales y los tratamientos que ofrecemos. Descubre por qué somos la mejor opción para el cuidado de tu sonrisa y cómo podemos ayudarte a lograr la sonrisa que siempre has deseado.
             </p>
             <div class="flex justify-center mt-8">
-                <button class="border border-white rounded-full px-6 py-2 text-sm flex items-center gap-2 hover:bg-white hover:text-brand-dark transition">
+                <button class=" text-xl border border-white rounded-full px-6 py-2 text-sm flex items-center gap-2 hover:bg-white hover:text-brand-dark transition">
                     Pedir cita ahora
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-light fa-arrow-right text-white"></i>
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
+
+    <div class="scrolling-wrapper flex flex-nowrap overflow-x-auto touch-auto ">
+            
+        <div class="card flex-none w-screen h-screen  flex items-center justify-center border border-white">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-light tracking-wider">LA EXPERIENCIA</h2>
+                    <p class="text-xl text-gray-700">Nuestra única misión es iluminar tu sonrisa</p>
+            </div>
+
+        </div>
+
+        <div class="card flex-none w-screen h-screen flex items-center justify-center text-5xl border border-white">
+            <div class="max-w-7xl mx-auto px-6">
+            
+            
+                <!-- Contenido -->
+                <div class="flex flex-col md:flex-row items-center gap-10">
+                  <!-- Imagen -->
+                  <div class="w-full md:w-1/2">
+                    <div class="aspect-square bg-gray-100 rounded-xl flex items-center justify-center">
+                        <img src="/src/images/pre_blanqueamiento.webp" alt="Paso 1 Blanqueamiento Philips !Zoom" >
+                    </div>
+                  </div>
+            
+                  <!-- Texto -->
+                  <div class="w-full md:w-1/2">
+                    <div class="border-t border-gray-300 pt-6">
+                      <div class="flex items-start justify-between">
+                        <div>
+                          <h3 class="text-4xl">Antes del blanqueamiento</h3>
+                        </div>
+                        <div>
+                          <!-- Ícono decorativo -->
+                          <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 12h10v10l10-10H12z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <p class="mt-4 text-gray-600 leading-relaxed">
+                        With Emili, clients gain direct access to their project's evolution. They can submit measurements, review updates, track adjustments, and approve changes — all on a transparent, user-friendly platform. This ensures smoother communication, faster approvals, and perfect alignment throughout the process.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <div class="card flex-none w-screen h-screen flex items-center justify-center text-5xl border border-white">
+            <div class="max-w-7xl mx-auto px-6">
+            
+            
+                   <!-- Contenido -->
+                <div class="flex flex-col md:flex-row items-center gap-10">
+                    <!-- Imagen -->
+                    <div class="w-full md:w-1/2">
+                      <div class="aspect-square bg-gray-100 rounded-xl flex items-center justify-center">
+                          <img src="/src/images/kit_philips_zoom.webp" alt="Paso 1 Blanqueamiento Philips !Zoom" >
+                      </div>
+                    </div>
+              
+                    <!-- Texto -->
+                    <div class="w-full md:w-1/2">
+                      <div class="border-t border-gray-300 pt-6">
+                        <div class="flex items-start justify-between">
+                          <div>
+                            <h3 class="text-4xl">Preparación del Kit !Zoom</h3>
+                          </div>
+                          <div>
+                            <!-- Ícono decorativo -->
+                            <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M12 2L2 12h10v10l10-10H12z" />
+                            </svg>
+                          </div>
+                        </div>
+                        <p class="mt-4 text-gray-600 leading-relaxed">
+                          With Emili, clients gain direct access to their project's evolution. They can submit measurements, review updates, track adjustments, and approve changes — all on a transparent, user-friendly platform. This ensures smoother communication, faster approvals, and perfect alignment throughout the process.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </div>
+        <div class="card flex-none w-screen h-screen  flex items-center justify-center text-5xl border border-white">
+            <div class="max-w-7xl mx-auto px-6">
+            
+            
+               <!-- Contenido -->
+               <div class="flex flex-col md:flex-row items-center gap-10">
+                <!-- Imagen -->
+                <div class="w-full md:w-1/2">
+                  <div class="aspect-square bg-gray-100 rounded-xl flex items-center justify-center">
+                      <img src="/src/images/Zoom.webp" alt="Paso 1 Blanqueamiento Philips !Zoom" >
+                  </div>
+                </div>
+          
+                <!-- Texto -->
+                <div class="w-full md:w-1/2">
+                  <div class="border-t border-gray-300 pt-6">
+                    <div class="flex items-start justify-between">
+                      <div>
+                        <h3 class="text-4xl">Una sonrisa más blanca en una sesión</h3>
+                      </div>
+                      <div>
+                        <!-- Ícono decorativo -->
+                        <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 2L2 12h10v10l10-10H12z" />
+                        </svg>
+                      </div>
+                    </div>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                      With Emili, clients gain direct access to their project's evolution. They can submit measurements, review updates, track adjustments, and approve changes — all on a transparent, user-friendly platform. This ensures smoother communication, faster approvals, and perfect alignment throughout the process.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              </div>
+        </div>
+    </div>
+    
+
+    <!-- Pricing Section 
     <section class="py-16 bg-gray-50">
-        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Nos dedicamos a hacerte parte de tu luminar sonrisa</h2>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="w-4/12 mx-auto text-center">
+                <span class="inline-block bg-black px-4 rounded-full text-center text-white text-lg">El proceso de una sonrisa brillante</span>
+                <h2 class="text-4xl text-center mb-12">Nos dedicamos únicamente al arte de iluminar sonrisas.</h2>
+            </div>
+
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Pricing Card 1 -->
+              
                 <div class="col-span-1">
                     <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden mb-4">
                         <img src="/placeholder.svg?height=400&width=400" alt="Plan Básico" class="w-full h-full object-cover">
                     </div>
                 </div>
                 
-                <!-- Pricing Details -->
+          
                 <div class="col-span-1 md:col-span-2">
                     <p class="text-gray-600 mb-8">
                         Nuestros planes están diseñados para adaptarse a tus necesidades específicas. Ofrecemos diferentes opciones que se ajustan a distintos presupuestos y requerimientos, garantizando siempre la máxima calidad en cada uno de nuestros servicios.
                     </p>
                     
-                    <!-- Accordion for pricing plans -->
                     <div x-data="{selected:null}">
                         <div class="mb-4">
                             <button 
                                 @click="selected !== 1 ? selected = 1 : selected = null"
                                 class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
                             >
-                                <span class="font-semibold">Preparación inicial Zoom</span>
+                                <h3 class=" text-3xl">Pre blanqueamiento</h3>
                                 <i class="fa-solid" :class="selected === 1 ? 'fa-minus' : 'fa-plus'"></i>
                             </button>
                             <div x-show="selected === 1" class="p-4 bg-gray-50">
@@ -221,10 +335,28 @@
                                 @click="selected !== 2 ? selected = 2 : selected = null"
                                 class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
                             >
-                                <span class="font-semibold">Blanqueamiento Premium</span>
+                                <span class="text-3xl">Preparación del Kit !Zoom</span>
                                 <i class="fa-solid" :class="selected === 2 ? 'fa-minus' : 'fa-plus'"></i>
                             </button>
                             <div x-show="selected === 2" class="p-4 bg-gray-50">
+                                <p>Nuestro tratamiento premium de blanqueamiento dental para resultados excepcionales y duraderos. Precio: $299</p>
+                                <ul class="mt-2 list-disc list-inside">
+                                    <li>Tratamiento Zoom completo</li>
+                                    <li>Kit de mantenimiento para casa</li>
+                                    <li>Seguimiento personalizado</li>
+                                    <li>Garantía de resultados</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <button 
+                                @click="selected !== 3 ? selected = 3 : selected = null"
+                                class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
+                            >
+                                <span class="text-3xl">Disfruta y sonrie</span>
+                                <i class="fa-solid" :class="selected === 3 ? 'fa-minus' : 'fa-plus'"></i>
+                            </button>
+                            <div x-show="selected === 3" class="p-4 bg-gray-50">
                                 <p>Nuestro tratamiento premium de blanqueamiento dental para resultados excepcionales y duraderos. Precio: $299</p>
                                 <ul class="mt-2 list-disc list-inside">
                                     <li>Tratamiento Zoom completo</li>
@@ -239,10 +371,98 @@
             </div>
         </div>
     </section>
+-->
+  <!-- Contact Section -->
+  <section class="bg-black text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-left mb-12">
+            <p class="text-sm  tracking-wider mb-2">Blanc & co</p>
+            <h2 class="text-2xl md:text-3xl  mb-4">Centro de Blanqueamiento Dental Profesional</h2>
+            <p class="max-w-2xl">
+                Nos especializamos en tratamientos de blanqueamiento dental de alta calidad. Nuestro equipo de profesionales está comprometido con brindarte la mejor experiencia y resultados excepcionales. Visítanos y descubre cómo podemos transformar tu sonrisa.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Pricing Card 1 -->
+            <div class="bg-zinc-900 bg-opacity-10 p-6 rounded-lg border border-white/10">
+                <div class="">
+                    <div class="mb-2 text-lg uppercase tracking-wider"><i class="fa-solid fa-user"></i> Individual</div>
+                    <h3 class="text-2xl">Essential Blanc</h3>
+                    <h4 class="mb-4">Tu sonrisa en su mejor versión.</h4>
+                    <p class="text-white/60 mb-4">
+                        Nuestro plan básico incluye una sesión de blanqueamiento profesional y un kit de mantenimiento para el hogar.
+                    </p>
+                    <ul class="mb-6 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-check mr-2"></i>
+                            <span>Precio: $6,500 mxn</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-check mr-2"></i>
+                            <span>Duración: 90 minutos</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-check mr-2"></i>
+                            <span>Consulta inicial</span>
+                        </li>
+                    </ul>
+                    <button class="bg-mint text-black px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition inline-block text-lg">
+                        Reservar cita <i class="fa-sharp fa-light fa-arrow-right-long inline-block align-middle!"></i>
+                    </button>
+                </div>
+               
+            </div>
+            
+            <!-- Pricing Card 2 -->
+            <div class="bg-zinc-900	 p-6 rounded-lg border border-white/10">
+                <div class="mb-2 text-lg uppercase tracking-wider"><i class="fa-solid fa-user-group-simple"></i> En Pareja</div>
+                <h3 class="text-2xl">Smile together</h3>
+                <h4 class="mb-4">Juntos siempre es mejor</h4>
 
-    <!-- FAQ Section -->
+                <p class="text-white/60 mb-4">
+                    Nuestro plan premium incluye múltiples sesiones de blanqueamiento y un kit completo de mantenimiento.
+                </p>
+                <ul class="mb-6 space-y-2">
+                    <li class="flex items-center">
+                        <i class="fa-solid fa-check mr-2"></i>
+                        <span>Precio: $12,200 mxn</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa-solid fa-check mr-2"></i>
+                        <span>Duración: 180 minutos</span>
+                    </li>
+                </ul>
+                <button class="bg-mint text-black px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition inline-block text-lg">
+                    Reservar cita <i class="fa-sharp fa-light fa-arrow-right-long inline-block align-middle!"></i>
+                </button>
+            </div>
+        </div>
+        <div>
+            
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4">
+            <div class="aspect-square bg-gray-200 overflow-hidden">
+                <img src="/placeholder.svg?height=300&width=300" alt="Galería 1" class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square bg-gray-200 overflow-hidden">
+                <img src="/placeholder.svg?height=300&width=300" alt="Galería 2" class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square bg-gray-200 overflow-hidden">
+                <img src="/placeholder.svg?height=300&width=300" alt="Galería 3" class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square bg-gray-200 overflow-hidden">
+                <img src="/placeholder.svg?height=300&width=300" alt="Galería 4" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </div>
+</section>
+    
+
+
+<!-- FAQ Section -->
     <section class="py-16 bg-white">
-        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-2xl md:text-3xl font-bold mb-2">Answering your questions</h2>
                 <p class="text-gray-600">Find answers to the most common questions about our services</p>
@@ -331,96 +551,17 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="bg-brand-dark text-white py-16">
-        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <p class="text-sm uppercase tracking-wider mb-2">BLANC & CO</p>
-                <h2 class="text-2xl md:text-3xl font-bold mb-4">Centro de Blanqueamiento de Barrio Salamanca</h2>
-                <p class="max-w-2xl mx-auto">
-                    Nos especializamos en tratamientos de blanqueamiento dental de alta calidad. Nuestro equipo de profesionales está comprometido con brindarte la mejor experiencia y resultados excepcionales. Visítanos y descubre cómo podemos transformar tu sonrisa.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <!-- Pricing Card 1 -->
-                <div class="bg-white bg-opacity-10 p-6 rounded-lg">
-                    <div class="mb-2 text-xs uppercase tracking-wider">PLAN 1</div>
-                    <h3 class="text-xl font-bold mb-4">Plan Básico</h3>
-                    <p class="text-gray-300 mb-4">
-                        Nuestro plan básico incluye una sesión de blanqueamiento profesional y un kit de mantenimiento para el hogar.
-                    </p>
-                    <ul class="mb-6 space-y-2">
-                        <li class="flex items-center">
-                            <i class="fa-solid fa-check mr-2"></i>
-                            <span>1 sesión de blanqueamiento</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fa-solid fa-check mr-2"></i>
-                            <span>Kit de mantenimiento básico</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fa-solid fa-check mr-2"></i>
-                            <span>Consulta inicial</span>
-                        </li>
-                    </ul>
-                    <button class="bg-white text-brand-dark px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition w-full">
-                        Reservar cita
-                    </button>
-                </div>
-                
-                <!-- Pricing Card 2 -->
-                <div class="bg-white bg-opacity-10 p-6 rounded-lg">
-                    <div class="mb-2 text-xs uppercase tracking-wider">PLAN 2</div>
-                    <h3 class="text-xl font-bold mb-4">Plan Premium</h3>
-                    <p class="text-gray-300 mb-4">
-                        Nuestro plan premium incluye múltiples sesiones de blanqueamiento y un kit completo de mantenimiento.
-                    </p>
-                    <ul class="mb-6 space-y-2">
-                        <li class="flex items-center">
-                            <i class="fa-solid fa-check mr-2"></i>
-                            <span>3 sesiones de blanqueamiento</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fa-solid fa-check mr-2"></i>
-                            <span>Kit de mantenimiento premium</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fa-solid fa-check mr-2"></i>
-                            <span>Consultas de seguimiento</span>
-                        </li>
-                    </ul>
-                    <button class="bg-white text-brand-dark px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition w-full">
-                        Reservar cita
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Gallery Section -->
     <section class="py-8">
-        <div class="max-w-content mx-auto">
-            <div class="grid grid-cols-2 md:grid-cols-4">
-                <div class="aspect-square bg-gray-200 overflow-hidden">
-                    <img src="/placeholder.svg?height=300&width=300" alt="Galería 1" class="w-full h-full object-cover">
-                </div>
-                <div class="aspect-square bg-gray-200 overflow-hidden">
-                    <img src="/placeholder.svg?height=300&width=300" alt="Galería 2" class="w-full h-full object-cover">
-                </div>
-                <div class="aspect-square bg-gray-200 overflow-hidden">
-                    <img src="/placeholder.svg?height=300&width=300" alt="Galería 3" class="w-full h-full object-cover">
-                </div>
-                <div class="aspect-square bg-gray-200 overflow-hidden">
-                    <img src="/placeholder.svg?height=300&width=300" alt="Galería 4" class="w-full h-full object-cover">
-                </div>
-            </div>
+        <div class="max-w-7xl mx-auto">
+            
         </div>
     </section>
 
     <!-- Contact Form Section -->
     <section class="py-16 bg-gray-100">
-        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                     <h2 class="text-2xl font-bold mb-4">Contacta con nosotros</h2>
@@ -489,7 +630,7 @@
 
     <!-- Footer -->
     <footer class="bg-brand-dark text-white py-12">
-        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div>
                     <div class="text-2xl font-bold mb-4">BLANC & CO</div>
@@ -550,5 +691,24 @@
             // Alpine.js initialization
         });
     </script>
+    <script>
+        // Animación GSAP horizontal
+        gsap.registerPlugin(ScrollTrigger);
+    
+        const sections = gsap.utils.toArray(".card");
+    
+        gsap.to(sections, {
+          xPercent: -100 * (sections.length - 1),
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".scrolling-wrapper",
+            pin: true,
+            scrub: 1,
+            snap: 1 / (sections.length - 1),
+            end: () => "+=" + document.querySelector(".scrolling-wrapper").offsetWidth
+          }
+        });
+      </script>
+    
 </body>
 </html>

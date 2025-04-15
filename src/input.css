@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+ --color-mint: #D6E4E9;
+}
+body {
+    font-family: 'degular-display', sans-serif;
+}
+p{ 
+    @apply text-lg;
+}
