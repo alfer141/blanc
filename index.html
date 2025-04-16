@@ -14,787 +14,790 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
-<body class="bg-black text-gray-800">
-    <!-- Header/Navigation -->
-    <header class="sticky top-0 text-white z-[99]">
-        <div class="bg-black rounded-xl max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-8">
-                <div class="text-xl font-bold"><img src="src/images/blanccco-logo.svg" alt=" Blanc & Co Logo SVG"></div>
-                <nav class="hidden md:flex space-x-8 text-lg">
-                    <a href="#" class="text-white hover:text-gray-300 ">Inicio</a>
-                    <a href="#" class="text-white hover:text-gray-300">Nosotros</a>
-                    <a href="#" class="text-white hover:text-gray-300">Productos</a>
-                    <a href="#" class="text-white hover:text-gray-300">Servicios</a>
-                    <a href="#" class="text-white hover:text-gray-300">Contacto</a>
-                </nav>
-                <button class="md:hidden text-white">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="bg-black text-white relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div class="z-10">
-                    <h1 class="text-3xl md:text-4xl lg:text-6xl font-medium mb-4">
-                        Vive una experiencia personalizada, cómoda y sensorial, donde tu sonrisa es la protagonista
-                    </h1>
-                    <p class="mb-4 text-gray-300 text-xl mt-4">
-                        Utilizamos la más alta tecnología del mercado, incluyendo el reconocido sistema Philips Zoom, para garantizar resultados visibles desde la primera sesión y una blancura que realmente se nota.
-                    </p>
-                    <button class="bg-mint text-black px-6 py-3 rounded-full  hover:bg-gray-200 transition text-xl">
+    <body class="bg-black text-gray-800">
+        <!-- Header/Navigation -->
+        <header class="sticky top-0 text-white z-[99]">
+            <div class="bg-black rounded-xl max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center py-8">
+                    <div class="text-xl font-bold"><img src="src/images/blanccco-logo.svg" alt=" Blanc & Co Logo SVG"></div>
+                    <nav class="hidden md:flex space-x-8 text-lg">
+                        <a href="#" class="text-white hover:text-gray-300 ">Inicio</a>
+                        <a href="#" class="text-white hover:text-gray-300">Nosotros</a>
+                        <a href="#" class="text-white hover:text-gray-300">Productos</a>
+                        <a href="#" class="text-white hover:text-gray-300">Servicios</a>
+                        <a href="#" class="text-white hover:text-gray-300">Contacto</a>
+                    </nav>
+                    <button class="md:hidden bg-mint text-black px-4 py-2 rounded-full  hover:bg-gray-200 transition ">
                         Reservar cita <i class="fa-light fa-arrow-up-right"></i>
                     </button>
                 </div>
-                <div class="relative hidden md:block">
-                    <!-- This would be the hero image -->
-                    <div class="aspect-[3/4] bg-gray-700 rounded-lg overflow-hidden relative">
-                        <div class="absolute bottom-4 right-4 flex flex-col items-end">
-                            <div class="bg-white rounded-md max-w-fit mb-4 px-5">
-                                <img class="w-32  " src="/src/images/google_reviews_logo.webp" alt="Google Reviews Testimonials">
-                            </div>
-                            <div class="bg-black/10 backdrop-blur-md p-6 rounded-md max-w-3xs">
-                                <div>
-                                    <div class="flex items-center text-white">
-                                        <i class="fa-solid fa-star-sharp"></i>
-                                        <i class="fa-solid fa-star-sharp"></i>
-                                        <i class="fa-solid fa-star-sharp"></i>
-                                        <i class="fa-solid fa-star-sharp"></i>
-                                        <i class="fa-solid fa-star-sharp"></i>
-                                    </div>
-                                    <p class="leading-none mt-4">Ut enim ad minim veniam, quis nostrud exercitation 
-                                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                    <span class="block text-xl mt-3">- Raúl Soto</span>
-                                </div>
-                                
+            </div>
+        </header>
 
+        <!-- Hero Section -->
+        <section class="bg-black text-white relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="z-10">
+                        <h1 class="text-3xl md:text-4xl lg:text-6xl font-medium mb-4">
+                            Vive una experiencia personalizada, cómoda y sensorial, donde tu sonrisa es la protagonista
+                        </h1>
+                        <p class="mb-4 text-gray-300 text-xl mt-4">
+                            Utilizamos la más alta tecnología del mercado, incluyendo el reconocido sistema Philips Zoom, para garantizar resultados visibles desde la primera sesión y una blancura que realmente se nota.
+                        </p>
+                        <button class="bg-mint text-black px-4 py-2  rounded-full  hover:bg-gray-200 transition text-xl">
+                            Reservar cita <i class="fa-light fa-arrow-up-right"></i>
+                        </button>
+                    </div>
+                    <div class="relative hidden md:block">
+                        <!-- This would be the hero image -->
+                        <div class="aspect-[3/4] bg-gray-700 rounded-lg overflow-hidden relative">
+                            <div class="absolute bottom-4 right-4 flex flex-col items-end">
+                                <div class="bg-white rounded-md max-w-fit mb-4 px-5">
+                                    <img class="w-32  " src="/src/images/google_reviews_logo.webp" alt="Google Reviews Testimonials">
+                                </div>
+                                <div class="bg-black/10 backdrop-blur-md p-6 rounded-md max-w-3xs">
+                                    <div>
+                                        <div class="flex items-center text-white">
+                                            <i class="fa-solid fa-star-sharp"></i>
+                                            <i class="fa-solid fa-star-sharp"></i>
+                                            <i class="fa-solid fa-star-sharp"></i>
+                                            <i class="fa-solid fa-star-sharp"></i>
+                                            <i class="fa-solid fa-star-sharp"></i>
+                                        </div>
+                                        <p class="leading-none mt-4">Ut enim ad minim veniam, quis nostrud exercitation 
+                                        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <span class="block text-xl mt-3">- Raúl Soto</span>
+                                    </div>
+                                    
+
+                                </div>
                             </div>
+                            <img src="src/images/blanqueamiento_main.webp" alt="Sonrisa perfecta" class="w-full h-full object-cover">
                         </div>
-                        <img src="src/images/blanqueamiento_main.webp" alt="Sonrisa perfecta" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <!-- Slider indicators 
+                <div class="slide-indicators flex justify-center space-x-2 mt-8" x-data="{active: 0}">
+                    <button @click="active = 0" :class="{'active': active === 0}" class="h-1 w-4 bg-gray-500 rounded-full transition-all"></button>
+                    <button @click="active = 1" :class="{'active': active === 1}" class="h-1 w-4 bg-gray-500 rounded-full transition-all"></button>
+                    <button @click="active = 2" :class="{'active': active === 2}" class="h-1 w-4 bg-gray-500 rounded-full transition-all"></button>
+                </div>-->
+            </div>
+        </section>
+
+        <!-- Brands/Partners Section -->
+        <section class="bg-white py-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-center text-sm text-gray-500 mb-6 text-lg">Sólo trabajamos con tecnología y marcas de primera</p>
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                    <div class=""><img src="src/images/Logos/biofilm-therapy.webp" alt=""></div>
+                    <div class=""><img src="src/images/Logos/ems-airflow.webp" alt=""></div>
+                    <div class=""><img src="src/images/Logos/ivoclar-vivadent.webp" alt=""></div>
+                    <div class=""><img src="src/images/Logos/philips-zoom.webp" alt=""></div>
+                    <div class=""><img src="src/images/Logos/relief-acp-logo.webp" alt=""></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="bg-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <span class="inline-block bg-black rounded-full text-white px-4">Acerca del tratamiento</span>
+                <h2 class="text-2xl md:text-3xl my-4">Descubre el poder detrás de tu sonrisa</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <p class="text-gray-600">
+                        En BLANC & CO, nos dedicamos a transformar sonrisas y vidas. Nuestro enfoque personalizado garantiza que cada tratamiento se adapte perfectamente a tus necesidades y deseos. Utilizamos tecnología de vanguardia y técnicas innovadoras para ofrecerte resultados excepcionales con la máxima comodidad.
+                    </p>
+                    <p class="text-gray-600">
+                        Nuestro equipo de profesionales altamente capacitados está comprometido con tu bienestar y satisfacción. Te acompañamos en cada paso del camino, asegurándonos de que te sientas cómodo y confiado durante todo el proceso.
+                    </p>
+                </div>
+
+                <!-- Image Gallery -->
+                <div class="flex flex-nowrap gap-x-2 overflow-x-scroll justify-start py-8">
+                    <div class="aspect-3/4 bg-gray-200 rounded-lg overflow-hidden min-w-xs max-w-xs h-xs">
+                        <img-comparison-slider>
+                            <img slot="first" src="src/images/pacientes/px_georgina_blanqueamiento_antes.webp" />
+                            <img slot="second" src="src/images/pacientes/px_georgina_blanqueamiento_despues.webp" />
+                        </img-comparison-slider>
+                    </div>
+                    <div class="aspect-3/4  bg-gray-200 rounded-lg overflow-hidden min-w-xs max-w-xs h-xs">
+                        <img-comparison-slider>
+                            <img slot="first" src="src/images/pacientes/px_william_blanqueamiento_antes.webp" />
+                            <img slot="second" src="src/images/pacientes/px_william_blanqueamiento_desp.webp" />
+                        </img-comparison-slider>
+                    </div>
+                    <div class="aspect-3/4 bg-gray-200 rounded-lg overflow-hidden min-w-xs max-w-xs h-xs">
+                        <img-comparison-slider>
+                            <img slot="first" src="src/images/pacientes/px_denisse_blanqueamiento_antes.webp" />
+                            <img slot="second" src="src/images/pacientes/px_denisse_blanqueamiento_despues.webp" />
+                        </img-comparison-slider>
+                    </div>
+                    <div class="aspect-3/4 bg-gray-200 rounded-lg overflow-hidden min-w-xs max-w-xs h-xs">
+                        <img-comparison-slider>
+                            <img slot="first" src="src/images/pacientes/px_mujer1_blanqueamientot_antes.webp" />
+                            <img slot="second" src="src/images/pacientes/px_mujer1_blanqueamientot_desspues.webp" />
+                        </img-comparison-slider>
+                    </div>
+                    <div class="aspect-3/4bg-gray-200 rounded-lg overflow-hidden min-w-xs max-w-xs h-xs">
+                        <img-comparison-slider>
+                            <img slot="first" src="src/images/pacientes/px_pao_blanqueamiento_antes.webp" />
+                            <img slot="second" src="src/images/pacientes/px_pao_blanqueamiento_despues.webp" />
+                        </img-comparison-slider>
+                    </div>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-4">
+                    <div class="feature">
+                        <h3 class="text-xl mb-2">Resultados excepcionales</h3>
+                        <p class="text-gray-600 text-sm">
+                            Obtén resultados visibles de blanqueamiento dental en tan solo una 
+                            sesión de 45 minutos. Aclara hasta 8 tonos en la 
+                            escala VITA con tecnología profesional aprobada.
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3 class="text-xl mb-2">Protege y respeta tu esmalte.</h3>
+                        <p class="text-gray-600 text-sm">Nuestro tratamiento de blanqueamiento dental es seguro, no invasivo y preserva el esmalte, cuidando la salud bucal mientras mejora la estética de tu sonrisa.
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3 class="text-xl mb-2">Sensibilidad mínima o nula.</h3>
+                        <p class="text-gray-600 text-sm">
+                            Cada sonrisa es única, por eso diseñamos planes de tratamiento adaptados a tus necesidades específicas y objetivos estéticos.
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3 class="text-xl mb-2">Experiencia confortable</h3>
+                        <p class="text-gray-600 text-sm">
+                            Priorizamos tu comodidad en cada visita, creando un ambiente relajante y utilizando técnicas que minimizan las molestias durante los tratamientos.
+                        </p>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Video Section -->
+        <section x-data="{ openVideo: false, 
+            videoUrl: 'https://customer-o3u27h8xl72n98rq.cloudflarestream.com/de2771e0919776353fc1ebdd85582d45/iframe?poster=https%3A%2F%2Fcustomer-o3u27h8xl72n98rq.cloudflarestream.com%2Fde2771e0919776353fc1ebdd85582d45%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600', 
+            pauseVideo() { 
+            this.videoUrl = ''; 
+            } 
+        }"
+        x-effect="if(!openVideo) pauseVideo()" class="bg-black text-white">
+        <!-- MODAL Overlay -->
+        <div class="modal-overlay" 
+            x-show="openVideo" 
+            x-transition
+            x-cloak>
+            <div class="modal-content"
+            @click.stop
+            @click.outside="openVideo = false" >
             
-            <!-- Slider indicators 
-            <div class="slide-indicators flex justify-center space-x-2 mt-8" x-data="{active: 0}">
-                <button @click="active = 0" :class="{'active': active === 0}" class="h-1 w-4 bg-gray-500 rounded-full transition-all"></button>
-                <button @click="active = 1" :class="{'active': active === 1}" class="h-1 w-4 bg-gray-500 rounded-full transition-all"></button>
-                <button @click="active = 2" :class="{'active': active === 2}" class="h-1 w-4 bg-gray-500 rounded-full transition-all"></button>
-            </div>-->
-        </div>
-    </section>
-
-    <!-- Brands/Partners Section -->
-    <section class="bg-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-sm text-gray-500 mb-6 text-lg">Sólo trabajamos con tecnología y marcas de primera</p>
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-                <div class=""><img src="src/images/Logos/biofilm-therapy.webp" alt=""></div>
-                <div class=""><img src="src/images/Logos/ems-airflow.webp" alt=""></div>
-                <div class=""><img src="src/images/Logos/ivoclar-vivadent.webp" alt=""></div>
-                <div class=""><img src="src/images/Logos/philips-zoom.webp" alt=""></div>
-                <div class=""><img src="src/images/Logos/relief-acp-logo.webp" alt=""></div>
+                <iframe
+                    :src="videoUrl"
+                    loading="lazy"
+                    class="w-[400px] h-[710px] mx-auto rounded-md border-0"
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowfullscreen="true">
+                </iframe>
             </div>
         </div>
-    </section>
 
-    <!-- Features Section -->
-    <section class="bg-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <span class="inline-block bg-black rounded-full text-white px-4">Acerca del tratamiento</span>
-            <h2 class="text-2xl md:text-3xl my-4">Descubre el poder detrás de tu sonrisa</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <p class="text-gray-600">
-                    En BLANC & CO, nos dedicamos a transformar sonrisas y vidas. Nuestro enfoque personalizado garantiza que cada tratamiento se adapte perfectamente a tus necesidades y deseos. Utilizamos tecnología de vanguardia y técnicas innovadoras para ofrecerte resultados excepcionales con la máxima comodidad.
-                </p>
-                <p class="text-gray-600">
-                    Nuestro equipo de profesionales altamente capacitados está comprometido con tu bienestar y satisfacción. Te acompañamos en cada paso del camino, asegurándonos de que te sientas cómodo y confiado durante todo el proceso.
-                </p>
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <!-- Imagen de fondo y botón para abrir el modal -->
+            <div 
+            class="relative aspect-video bg-[url(/src/images/blanc_clean.webp)]  bg-cover bg-center rounded-lg mb-8 flex items-center justify-center"
+            >
+            <!-- Al hacer clic, restauramos la URL y abrimos el modal -->
+            <button
+                @click="
+                videoUrl = 'https://customer-o3u27h8xl72n98rq.cloudflarestream.com/de2771e0919776353fc1ebdd85582d45/iframe?poster=https%3A%2F%2Fcustomer-o3u27h8xl72n98rq.cloudflarestream.com%2Fde2771e0919776353fc1ebdd85582d45%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600';
+                openVideo = true
+                " class="w-24 h-24 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
+                <i class="text-4xl fa-solid fa-play cursor-pointer"></i>
+            </button>
             </div>
 
-            <!-- Image Gallery -->
-            <div class="flex flex-nowrap gap-x-2 overflow-x-scroll justify-start py-8">
-                <div class="aspect-3/4 bg-gray-200 rounded-lg overflow-hidden min-w-xs max-w-xs h-xs">
-                    <img-comparison-slider>
-                        <img slot="first" src="src/images/pacientes/px_georgina_blanqueamiento_antes.webp" />
-                        <img slot="second" src="src/images/pacientes/px_georgina_blanqueamiento_despues.webp" />
-                    </img-comparison-slider>
-                </div>
-                <div class="aspect-3/4  bg-gray-200 rounded-lg overflow-hidden min-w-xs max-w-xs h-xs">
-                    <img-comparison-slider>
-                        <img slot="first" src="src/images/pacientes/px_william_blanqueamiento_antes.webp" />
-                        <img slot="second" src="src/images/pacientes/px_william_blanqueamiento_desp.webp" />
-                    </img-comparison-slider>
-                </div>
-                <div class="aspect-3/4 bg-gray-200 rounded-lg overflow-hidden min-w-xs max-w-xs h-xs">
-                    <img-comparison-slider>
-                        <img slot="first" src="src/images/pacientes/px_denisse_blanqueamiento_antes.webp" />
-                        <img slot="second" src="src/images/pacientes/px_denisse_blanqueamiento_despues.webp" />
-                    </img-comparison-slider>
-                </div>
-                <div class="aspect-3/4 bg-gray-200 rounded-lg overflow-hidden min-w-xs max-w-xs h-xs">
-                    <img-comparison-slider>
-                        <img slot="first" src="src/images/pacientes/px_mujer1_blanqueamientot_antes.webp" />
-                        <img slot="second" src="src/images/pacientes/px_mujer1_blanqueamientot_desspues.webp" />
-                    </img-comparison-slider>
-                </div>
-                <div class="aspect-3/4bg-gray-200 rounded-lg overflow-hidden min-w-xs max-w-xs h-xs">
-                    <img-comparison-slider>
-                        <img slot="first" src="src/images/pacientes/px_pao_blanqueamiento_antes.webp" />
-                        <img slot="second" src="src/images/pacientes/px_pao_blanqueamiento_despues.webp" />
-                    </img-comparison-slider>
-                </div>
-            </div>
-
-            <!-- Features Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-4">
-                <div class="feature">
-                    <h3 class="text-xl mb-2">Resultados excepcionales</h3>
-                    <p class="text-gray-600 text-sm">
-                        Obtén resultados visibles de blanqueamiento dental en tan solo una 
-                        sesión de 45 minutos. Aclara hasta 8 tonos en la 
-                        escala VITA con tecnología profesional aprobada.
-                    </p>
-                </div>
-                <div class="feature">
-                    <h3 class="text-xl mb-2">Protege y respeta tu esmalte.</h3>
-                    <p class="text-gray-600 text-sm">Nuestro tratamiento de blanqueamiento dental es seguro, no invasivo y preserva el esmalte, cuidando la salud bucal mientras mejora la estética de tu sonrisa.
-                    </p>
-                </div>
-                <div class="feature">
-                    <h3 class="text-xl mb-2">Sensibilidad mínima o nula.</h3>
-                    <p class="text-gray-600 text-sm">
-                        Cada sonrisa es única, por eso diseñamos planes de tratamiento adaptados a tus necesidades específicas y objetivos estéticos.
-                    </p>
-                </div>
-                <div class="feature">
-                    <h3 class="text-xl mb-2">Experiencia confortable</h3>
-                    <p class="text-gray-600 text-sm">
-                        Priorizamos tu comodidad en cada visita, creando un ambiente relajante y utilizando técnicas que minimizan las molestias durante los tratamientos.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Video Section -->
-    <section x-data="{ openVideo: false, 
-        videoUrl: 'https://customer-o3u27h8xl72n98rq.cloudflarestream.com/de2771e0919776353fc1ebdd85582d45/iframe?poster=https%3A%2F%2Fcustomer-o3u27h8xl72n98rq.cloudflarestream.com%2Fde2771e0919776353fc1ebdd85582d45%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600', 
-        pauseVideo() { 
-        this.videoUrl = ''; 
-        } 
-    }"
-    x-effect="if(!openVideo) pauseVideo()" class="bg-black text-white">
-    <!-- MODAL Overlay -->
-    <div class="modal-overlay" 
-        x-show="openVideo" 
-        x-transition
-        x-cloak>
-        <div class="modal-content"
-        @click.stop
-        @click.outside="openVideo = false" >
-        
-            <iframe
-                :src="videoUrl"
-                loading="lazy"
-                class="w-[400px] h-[710px] mx-auto rounded-md border-0"
-                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-                allowfullscreen="true">
-            </iframe>
-        </div>
-    </div>
-
-    <!-- CONTENIDO PRINCIPAL -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <!-- Imagen de fondo y botón para abrir el modal -->
-        <div 
-        class="relative aspect-video bg-[url(/src/images/blanc_clean.webp)]  bg-cover bg-center rounded-lg mb-8 flex items-center justify-center"
-        >
-        <!-- Al hacer clic, restauramos la URL y abrimos el modal -->
-        <button
-            @click="
-            videoUrl = 'https://customer-o3u27h8xl72n98rq.cloudflarestream.com/de2771e0919776353fc1ebdd85582d45/iframe?poster=https%3A%2F%2Fcustomer-o3u27h8xl72n98rq.cloudflarestream.com%2Fde2771e0919776353fc1ebdd85582d45%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600';
-            openVideo = true
-            " class="w-24 h-24 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
-            <i class="text-4xl fa-solid fa-play cursor-pointer"></i>
-        </button>
-        </div>
-
-        
-        <p class="text-center text-2xl! max-w-3xl mx-auto">
-            Conoce más sobre nuestra clínica dental y cómo 
-            transformamos sonrisas a diario. En este video, 
-            te mostramos nuestras instalaciones, el equipo de profesionales 
-            y los tratamientos que ofrecemos. Descubre por qué somos la mejor 
-            opción para el cuidado de tu sonrisa y cómo podemos ayudarte 
-            a lograr la sonrisa que siempre has deseado.
-        </p>
-
-        
-            <div class="flex justify-center mt-8">
-                <button class="text-xl border border-white rounded-full px-6 py-2 flex items-center gap-2 hover:bg-white hover:text-black transition">
-                    Reservar cita ahora <i class="fa-light fa-arrow-right text-white"></i>
-                </button>
-            </div>
-    </div>
-    </section>
-
-
-
-    <div class="bg-white scrolling-wrapper flex flex-nowrap overflow-x-auto touch-auto ">
             
-        <div class="card flex-none w-screen h-screen  flex items-center justify-center border border-white">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl md:text-6xl font-light tracking-wider">LA EXPERIENCIA</h2>
+            <p class="text-center text-2xl! max-w-3xl mx-auto">
+                Conoce más sobre nuestra clínica dental y cómo 
+                transformamos sonrisas a diario. En este video, 
+                te mostramos nuestras instalaciones, el equipo de profesionales 
+                y los tratamientos que ofrecemos. Descubre por qué somos la mejor 
+                opción para el cuidado de tu sonrisa y cómo podemos ayudarte 
+                a lograr la sonrisa que siempre has deseado.
+            </p>
+
+            
+                <div class="flex justify-center mt-8">
+                    <button class="text-xl border border-white rounded-full px-6 py-2 flex items-center gap-2 hover:bg-white hover:text-black transition">
+                        Reservar cita ahora <i class="fa-light fa-arrow-right text-white"></i>
+                    </button>
+                </div>
+        </div>
+        </section>
+
+
+
+        <!-- Contenedor de la sección -->
+        <div class="xl:pb-0 pb-16 bg-white scrolling-wrapper flex flex-col md:flex-row md:flex-nowrap overflow-x-auto md:overflow-x-hidden touch-auto">
+        
+            <!-- Tarjeta 1 -->
+            <div class="xl:py-0 pt-16 card flex-none w-full md:w-screen h-auto md:h-screen flex items-center justify-center border border-white">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl md:text-6xl font-light tracking-wider">LA EXPERIENCIA</h2>
                     <p class="text-xl text-gray-700">Nuestra única misión es iluminar tu sonrisa</p>
+                </div>
             </div>
-
-        </div>
-
-        <div class="card flex-none w-screen h-screen flex items-center justify-center text-5xl border border-white">
+        
+            <!-- Tarjeta 2 -->
+            <div class="card flex-none w-full md:w-screen h-auto md:h-screen flex items-center justify-center border border-white">
             <div class="max-w-7xl mx-auto px-6">
-            
-            
                 <!-- Contenido -->
                 <div class="flex flex-col md:flex-row items-center gap-10">
-                  <!-- Imagen -->
-                  <div class="w-full md:w-1/2">
+                <!-- Imagen -->
+                <div class="w-full md:w-1/2">
                     <div class="aspect-square bg-gray-100 rounded-xl flex items-center justify-center">
-                        <img src="/src/images/pre_blanqueamiento.webp" alt="Paso 1 Blanqueamiento Philips !Zoom" >
+                    <img src="/src/images/pre_blanqueamiento.webp" alt="Paso 1 Blanqueamiento Philips !Zoom" class="object-cover">
                     </div>
-                  </div>
-            
-                  <!-- Texto -->
-                  <div class="w-full md:w-1/2">
+                </div>
+                <!-- Texto -->
+                <div class="w-full md:w-1/2">
                     <div class="border-t border-gray-300 pt-6">
-                      <div class="flex items-start justify-between">
+                    <div class="flex items-start justify-between">
                         <div>
-                          <h3 class="text-4xl">Antes del blanqueamiento</h3>
+                        <h3 class="text-4xl">Antes del blanqueamiento</h3>
                         </div>
                         <div>
-                          <!-- Ícono decorativo -->
-                          <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2L2 12h10v10l10-10H12z" />
-                          </svg>
+                        <!-- Ícono decorativo -->
+                        <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 12h10v10l10-10H12z"/>
+                        </svg>
                         </div>
-                      </div>
-                      <p class="mt-4 text-gray-600 leading-relaxed">
-                        Nuestro equipo te explicará detalladamente cada
-                        etapa del procedimiento y resolverá todas tus dudas sobre el 
+                    </div>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Nuestro equipo te explicará detalladamente cada etapa del procedimiento y resolverá todas tus dudas sobre el 
                         tratamiento. Luego realizaremos una evaluación completa para verificar el estado de tus dientes y encías, 
                         detectando posibles caries u otros problemas que puedan afectar el procedimiento. Antes de iniciar el blanqueamiento, 
                         realizamos una profilaxis dental profesional con nuestra avanzada tecnología Airflow® de EMS, un método cómodo y 
-                        efectivo para eliminar manchas superficiales y placa dental, asegurando resultados uniformes y potenciados</p>
+                        efectivo para eliminar manchas superficiales y placa dental, asegurando resultados uniformes y potenciados.
+                    </p>
                     </div>
-                  </div>
                 </div>
-              </div>
-        </div>
-
-        <div class="card flex-none w-screen h-screen flex items-center justify-center text-5xl border border-white">
-            <div class="max-w-7xl mx-auto px-6">
-            
-            
-                   <!-- Contenido -->
-                <div class="flex flex-col md:flex-row items-center gap-10">
+                </div>
+            </div>
+            </div>
+        
+            <!-- Tarjeta 3 -->
+            <div class="card flex-none w-full md:w-screen h-auto md:h-screen flex items-center justify-center border border-white">
+                <div class="max-w-7xl mx-auto px-6 xl:mt-0 mt-12">
+                    <!-- Contenido -->
+                    <div class="flex flex-col md:flex-row items-center gap-10">
                     <!-- Imagen -->
                     <div class="w-full md:w-1/2">
-                      <div class="aspect-square bg-gray-100 rounded-xl flex items-center justify-center">
-                          <img src="/src/images/kit_philips_zoom.webp" alt="Paso 1 Blanqueamiento Philips !Zoom" >
-                      </div>
+                        <div class="aspect-square bg-gray-100 rounded-xl flex items-center justify-center">
+                        <img src="/src/images/kit_philips_zoom.webp" alt="Paso 1 Blanqueamiento Philips !Zoom" class="object-cover">
+                        </div>
                     </div>
-              
                     <!-- Texto -->
                     <div class="w-full md:w-1/2">
-                      <div class="border-t border-gray-300 pt-6">
+                        <div class="border-t border-gray-300 pt-6">
                         <div class="flex items-start justify-between">
-                          <div>
+                            <div>
                             <h3 class="text-4xl">Preparación del Kit !Zoom</h3>
-                          </div>
-                          <div>
+                            </div>
+                            <div>
                             <!-- Ícono decorativo -->
                             <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
-                              <path d="M12 2L2 12h10v10l10-10H12z" />
+                                <path d="M12 2L2 12h10v10l10-10H12z"/>
                             </svg>
-                          </div>
+                            </div>
                         </div>
                         <p class="mt-4 text-gray-600 leading-relaxed">
-                            Una vez completada la limpieza dental, procederemos a aplicar cuidadosamente 
-                            el kit de blanqueamiento Philips Zoom!, que incluye un protector para encías, 
-                            gel desensibilizante y un agente blanqueador profesional de alta calidad. Al 
-                            colocar adecuadamente cada elemento, activaremos el tratamiento utilizando una luz LED 
-                            fría con la tecnología especializada de Philips para garantizar resultados óptimos.
+                            Una vez completada la limpieza dental, procederemos a aplicar cuidadosamente el kit de blanqueamiento Philips Zoom!, 
+                            que incluye un protector para encías, gel desensibilizante y un agente blanqueador profesional de alta calidad. Al 
+                            colocar adecuadamente cada elemento, activaremos el tratamiento utilizando una luz LED fría con la tecnología especializada 
+                            de Philips para garantizar resultados óptimos.
                         </p>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-        </div>
-        <div class="card flex-none w-screen h-screen  flex items-center justify-center text-5xl border border-white">
-            <div class="max-w-7xl mx-auto px-6">
-            
-            
-               <!-- Contenido -->
-               <div class="flex flex-col md:flex-row items-center gap-10">
-                <!-- Imagen -->
-                <div class="w-full md:w-1/2">
-                  <div class="aspect-square bg-gray-100 rounded-xl flex items-center justify-center">
-                      <img src="/src/images/Zoom.webp" alt="Paso 1 Blanqueamiento Philips !Zoom" >
-                  </div>
-                </div>
-          
-                <!-- Texto -->
-                <div class="w-full md:w-1/2">
-                  <div class="border-t border-gray-300 pt-6">
-                    <div class="flex items-start justify-between">
-                      <div>
-                        <h3 class="text-4xl">Una sonrisa más blanca en una sesión</h3>
-                      </div>
-                      <div>
-                        <!-- Ícono decorativo -->
-                        <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 2L2 12h10v10l10-10H12z" />
-                        </svg>
-                      </div>
-                    </div>
-                    <p class="mt-4 text-gray-600 leading-relaxed">
-                        El tratamiento se realiza en ciclos cortos de 15 minutos cada uno,
-                         dependiendo de tus objetivos personales y el estado actual de tus dientes. 
-                         La sesión completa generalmente dura entre 45 y 60 minutos (3 o 4 ciclos). Mientras tanto,
-                          puedes relajarte plenamente disfrutando de una experiencia estilo spa, utilizando audífonos 
-                          con cancelación de ruido y ondas binaurales relajantes. También puedes complementar la experiencia 
-                          con un masajeador ocular, creando un ambiente totalmente cómodo y placentero durante todo el procedimiento. 
-                         <b>Salir relajado y con tus sonrisa hasta 8 tonos más claros.</b>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              </div>
-        </div>
-    </div>
-    
-
-    <!-- Pricing Section 
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="w-4/12 mx-auto text-center">
-                <span class="inline-block bg-black px-4 rounded-full text-center text-white text-lg">El proceso de una sonrisa brillante</span>
-                <h2 class="text-4xl text-center mb-12">Nos dedicamos únicamente al arte de iluminar sonrisas.</h2>
-            </div>
-
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-              
-                <div class="col-span-1">
-                    <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden mb-4">
-                        <img src="/placeholder.svg?height=400&width=400" alt="Plan Básico" class="w-full h-full object-cover">
-                    </div>
-                </div>
-                
-          
-                <div class="col-span-1 md:col-span-2">
-                    <p class="text-gray-600 mb-8">
-                        Nuestros planes están diseñados para adaptarse a tus necesidades específicas. Ofrecemos diferentes opciones que se ajustan a distintos presupuestos y requerimientos, garantizando siempre la máxima calidad en cada uno de nuestros servicios.
-                    </p>
-                    
-                    <div x-data="{selected:null}">
-                        <div class="mb-4">
-                            <button 
-                                @click="selected !== 1 ? selected = 1 : selected = null"
-                                class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
-                            >
-                                <h3 class=" text-3xl">Pre blanqueamiento</h3>
-                                <i class="fa-solid" :class="selected === 1 ? 'fa-minus' : 'fa-plus'"></i>
-                            </button>
-                            <div x-show="selected === 1" class="p-4 bg-gray-50">
-                                <p>Nuestro plan inicial incluye una evaluación completa, limpieza profesional y preparación para el tratamiento Zoom de blanqueamiento. Precio: $99</p>
-                                <ul class="mt-2 list-disc list-inside">
-                                    <li>Evaluación dental completa</li>
-                                    <li>Limpieza profesional</li>
-                                    <li>Preparación para blanqueamiento</li>
-                                    <li>Consulta personalizada</li>
-                                </ul>
-                            </div>
                         </div>
-                        
-                        <div class="mb-4">
-                            <button 
-                                @click="selected !== 2 ? selected = 2 : selected = null"
-                                class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
-                            >
-                                <span class="text-3xl">Preparación del Kit !Zoom</span>
-                                <i class="fa-solid" :class="selected === 2 ? 'fa-minus' : 'fa-plus'"></i>
-                            </button>
-                            <div x-show="selected === 2" class="p-4 bg-gray-50">
-                                <p>Nuestro tratamiento premium de blanqueamiento dental para resultados excepcionales y duraderos. Precio: $299</p>
-                                <ul class="mt-2 list-disc list-inside">
-                                    <li>Tratamiento Zoom completo</li>
-                                    <li>Kit de mantenimiento para casa</li>
-                                    <li>Seguimiento personalizado</li>
-                                    <li>Garantía de resultados</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="mb-4">
-                            <button 
-                                @click="selected !== 3 ? selected = 3 : selected = null"
-                                class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
-                            >
-                                <span class="text-3xl">Disfruta y sonrie</span>
-                                <i class="fa-solid" :class="selected === 3 ? 'fa-minus' : 'fa-plus'"></i>
-                            </button>
-                            <div x-show="selected === 3" class="p-4 bg-gray-50">
-                                <p>Nuestro tratamiento premium de blanqueamiento dental para resultados excepcionales y duraderos. Precio: $299</p>
-                                <ul class="mt-2 list-disc list-inside">
-                                    <li>Tratamiento Zoom completo</li>
-                                    <li>Kit de mantenimiento para casa</li>
-                                    <li>Seguimiento personalizado</li>
-                                    <li>Garantía de resultados</li>
-                                </ul>
-                            </div>
-                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
--->
-  <!-- Contact Section -->
-  <section class="bg-black text-white pb-16 relative ">
-    <img src="/src/images/clouds.webp"class="object-fill w-full h-full absolute  top-0"  alt="">
-
-    <div 
-    class="absolute inset-0 bg-gradient-to-b bg-[linear-gradient(180deg,_rgba(0,0,0,0.3)_0%,_rgba(0,0,0,1)_70%)]"
-  ></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative pt-16">
-        <div class="text-left mb-12">
-            <p class="text-sm  tracking-wider mb-2">Blanc & co</p>
-            <h2 class="text-2xl md:text-3xl  mb-4">Centro de Blanqueamiento Dental Profesional</h2>
-            <p class="max-w-2xl">
-                Nos especializamos en tratamientos de blanqueamiento dental de alta calidad. Nuestro equipo de profesionales está comprometido con brindarte la mejor experiencia y resultados excepcionales. Visítanos y descubre cómo podemos transformar tu sonrisa.
-            </p>
+        
+            <!-- Tarjeta 4 -->
+            <div class="card flex-none w-full md:w-screen h-auto md:h-screen flex items-center justify-center border border-white">
+                <div class="max-w-7xl mx-auto px-6 xl:mt-0 mt-12">
+                    <!-- Contenido -->
+                    <div class="flex flex-col md:flex-row items-center gap-10">
+                    <!-- Imagen -->
+                    <div class="w-full md:w-1/2">
+                        <div class="aspect-square bg-gray-100 rounded-xl flex items-center justify-center">
+                        <img src="/src/images/Zoom.webp" alt="Paso 1 Blanqueamiento Philips !Zoom" class="object-cover">
+                        </div>
+                    </div>
+                    <!-- Texto -->
+                    <div class="w-full md:w-1/2">
+                        <div class="border-t border-gray-300 pt-6">
+                        <div class="flex items-start justify-between">
+                            <div>
+                            <h3 class="text-4xl">Una sonrisa más blanca en una sesión</h3>
+                            </div>
+                            <div>
+                            <!-- Ícono decorativo -->
+                            <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L2 12h10v10l10-10H12z"/>
+                            </svg>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-gray-600 leading-relaxed">
+                            El tratamiento se realiza en ciclos cortos de 15 minutos cada uno, dependiendo de tus objetivos personales y el estado actual 
+                            de tus dientes. La sesión completa generalmente dura entre 45 y 60 minutos (3 o 4 ciclos). Mientras tanto, puedes relajarte 
+                            plenamente disfrutando de una experiencia estilo spa, utilizando audífonos con cancelación de ruido y ondas binaurales relajantes. 
+                            También puedes complementar la experiencia con un masajeador ocular, creando un ambiente totalmente cómodo y placentero durante 
+                            todo el procedimiento. <b>Salir relajado y con tus sonrisa hasta 8 tonos más claros.</b>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <!-- Pricing Card 1 -->
-            <div class="bg-zinc-900/60 backdrop-blur-lg bg-opacity-10 p-6 rounded-lg border border-white/10">
-                <div class="">
-                    <div class="mb-2 text-lg uppercase tracking-wider"><i class="fa-solid fa-user"></i> Individual</div>
-                    <h3 class="text-2xl">Essential Blanc</h3>
-                    <h4 class="mb-4">Tu sonrisa en su mejor versión.</h4>
-                    <p class="text-white/60 mb-4">
-                        Nuestro plan básico incluye una sesión de blanqueamiento profesional y un kit de mantenimiento para el hogar.
-                    </p>
-                    <ul class="mb-6 space-y-2">
-                        <li class="flex items-center">
-                            <i class="fa-solid fa-check mr-2"></i>
-                            <span>Precio: $6,500 mxn</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fa-solid fa-check mr-2"></i>
-                            <span>Duración: 90 minutos</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fa-solid fa-check mr-2"></i>
-                            <span>Consulta inicial</span>
-                        </li>
-                    </ul>
-                    <button class="bg-mint text-black px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition inline-block text-lg">
-                        Reservar cita <i class="fa-sharp fa-light fa-arrow-right-long inline-block align-middle!"></i>
-                    </button>
+
+        <!-- Pricing Section 
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="w-4/12 mx-auto text-center">
+                    <span class="inline-block bg-black px-4 rounded-full text-center text-white text-lg">El proceso de una sonrisa brillante</span>
+                    <h2 class="text-4xl text-center mb-12">Nos dedicamos únicamente al arte de iluminar sonrisas.</h2>
                 </div>
-               
-            </div>
-            
-            <!-- Pricing Card 2 -->
-            <div class="bg-zinc-900/60 backdrop-blur-lg	 p-6 rounded-lg border border-white/10">
-                <div class="mb-2 text-lg uppercase tracking-wider"><i class="fa-solid fa-user-group-simple"></i> En Pareja</div>
-                <h3 class="text-2xl">Smile together</h3>
-                <h4 class="mb-4">Juntos siempre es mejor</h4>
 
-                <p class="text-white/60 mb-4">
-                    Nuestro plan premium incluye múltiples sesiones de blanqueamiento y un kit completo de mantenimiento.
-                </p>
-                <ul class="mb-6 space-y-2">
-                    <li class="flex items-center">
-                        <i class="fa-solid fa-check mr-2"></i>
-                        <span>Precio: $12,200 mxn</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fa-solid fa-check mr-2"></i>
-                        <span>Duración: 180 minutos</span>
-                    </li>
-                </ul>
-                <button class="bg-mint text-black px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition inline-block text-lg">
-                    Reservar cita <i class="fa-sharp fa-light fa-arrow-right-long inline-block align-middle!"></i>
-                </button>
-            </div>
-        </div>
-        <div class="text-center text-xl mb-8">
-            <span class="block">Visitanos en Instagram</span>
-            <a class="inline-block hover:opacity-50 underline" href="https://instagram.com/blanc_andco.mx" target="_blank">@blanc_andco.mx</a>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4">
-            <div class="aspect-square bg-zinc-900 overflow-hidden cursor-pointer">
-                <img class="hover:opacity-50" src="/src/images/instagram/glossier.webp" alt="Blanqueamiento dental Profesional" class="w-full h-full object-cover">
-            </div>
-            <div class="aspect-square bg-zinc-900 overflow-hidden cursor-pointer">
-                <img class="hover:opacity-50 " src="/src/images/instagram/new_form _to smile.webp" alt="Una nueva forma de Sonreir con seguridad" class="w-full h-full object-cover">
-            </div>
-            <div class="aspect-square bg-zinc-900 overflow-hidden cursor-pointer">
-                <img class="hover:opacity-50 " src="/src/images/instagram/ready.webp" alt="Listos, Blanqueamiento dental En querétaro" class="w-full h-full object-cover">
-            </div>
-            <div class="aspect-square bg-zinc-900 overflow-hidden cursor-pointer">
-                <img class="hover:opacity-50 " src="/src/images/instagram/shine_bright.webp" alt="clínica de blanqueamiento dental" class="w-full h-full object-cover">
-            </div>
-        </div>
-    </div>
-    
-   
-</section>
-    
-
-
-<!-- FAQ Section -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl mb-2">Preguntas frecuentes</h2>
-                <p class="text-gray-600">Respondemos las preguntas más comunes de nuestros pacientes acerca de nuestro servicio</p>
-            </div>
-            
-            <!-- FAQ Accordion -->
-            <div class="max-w-3xl mx-auto" x-data="{selected:null}">
-                <div class="mb-4">
-                    <button 
-                        @click="selected !== 1 ? selected = 1 : selected = null"
-                        class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
-                    >
-                        <span class="text-2xl">¿Qué utilizamos en Blanc & Co para realizar el blanqueamiento dental?</span>
-                        <i class="fa-solid" :class="selected === 1 ? 'fa-minus' : 'fa-plus'"></i>
-                    </button>
-                    <div x-show="selected === 1" class="p-4 bg-gray-50">
-                        <p class="text-xl">En Blanc & Co utilizamos la avanzada tecnología de Philips Zoom! y EMS con Biofilm Guided, garantizando resultados superiores y una limpieza profunda, efectiva y cómoda para nuestros pacientes.</p>
-                    </div>
-                </div>
                 
-                <div class="mb-4">
-                    <button 
-                        @click="selected !== 2 ? selected = 2 : selected = null"
-                        class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
-                    >
-                        <span class="text-2xl">¿Por qué confiar en nuestro servicio de blanqueamiento dental? </span>
-                        <i class="fa-solid" :class="selected === 2 ? 'fa-minus' : 'fa-plus'"></i>
-                    </button>
-                    <div x-show="selected === 2" class="p-4 bg-gray-50">
-                        <p class="text-xl">Nuestro equipo de odontólogos e higienistas altamente capacitados se enfoca en brindar comodidad, seguridad y resultados excepcionales. Además, usamos tecnología innovadora que asegura tratamientos eficaces y satisfactorios.</p>
-                    </div>
-                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <div class="mb-4">
-                    <button 
-                        @click="selected !== 3 ? selected = 3 : selected = null"
-                        class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left">
-                        <span class="text-2xl">¿Es seguro el blanqueamiento dental con láser y puede dañar el esmalte dental?</span>
-                        <i class="fa-solid" :class="selected === 3 ? 'fa-minus' : 'fa-plus'"></i>
-                    </button>
-                    <div x-show="selected === 3" class="p-4 bg-gray-50">
-                        <p class="text-xl">Sí, el blanqueamiento dental con láser es un 
-                        procedimiento seguro cuando lo realiza un profesional capacitado. 
-                        Nuestros especialistas cumplen estrictos protocolos para garantizar 
-                        la comodidad, seguridad y satisfacción de cada paciente durante todo el proceso.</p>
-                    </div>
-                </div>
-                
-                <div class="mb-4">
-                    <button 
-                        @click="selected !== 4 ? selected = 4 : selected = null"
-                        class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
-                    >
-                        <span class="text-2xl">¿Puede dañar el esmalte dental el blanqueamiento con láser?</span>
-                        <i class="fa-solid" :class="selected === 4 ? 'fa-minus' : 'fa-plus'"></i>
-                    </button>
-                    <div x-show="selected === 4" class="p-4 bg-gray-50">
-                        <p class="text-xl"> No, el procedimiento está diseñado para ser cuidadoso y respetuoso con el 
-                        esmalte dental. Nuestros expertos utilizan equipos avanzados que protegen la integridad del esmalte, 
-                        asegurando una salud dental óptima durante y después del tratamiento.</p>
-                    </div>
-                </div>
-                
-                <div class="mb-4">
-                    <button 
-                        @click="selected !== 5 ? selected = 5 : selected = null"
-                        class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
-                    >
-                        <span class="text-2xl">¿Es doloroso el blanqueamiento dental con láser?</span>
-                        <i class="fa-solid" :class="selected === 5 ? 'fa-minus' : 'fa-plus'"></i>
-                    </button>
-                    <div x-show="selected === 5" class="p-4 bg-gray-50">
-                        <p class="text-xl">El procedimiento es prácticamente indoloro, aunque algunas personas podrían experimentar una leve sensibilidad temporal que desaparece rápidamente.</p>
-                    </div>
-                </div>
-                
-                <div class="mb-4">
-                    <button 
-                        @click="selected !== 6 ? selected = 6 : selected = null"
-                        class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
-                    >
-                        <span class="text-2xl">Quién es candidato al blanqueamiento dental con láser y qué sucede si tengo restauraciones dentales o carillas?</span>
-                        <i class="fa-solid" :class="selected === 6 ? 'fa-minus' : 'fa-plus'"></i>
-                    </button>
-                    <div x-show="selected === 6" class="p-4 bg-gray-50">
-                        <p class="text-xl">Este tratamiento es ideal para adultos con buena 
-                        salud bucal y sin enfermedades periodontales. Las restauraciones dentales 
-                        o carillas no se blanquean con el procedimiento, por lo que podría ser necesario 
-                        ajustarlas posteriormente para igualar el tono.</p>
-                    </div>
-                </div>
-
-                <div class="mb-4">
-                    <button 
-                        @click="selected !== 8 ? selected = 8 : selected = null"
-                        class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
-                    >
-                        <span class="text-2xl">¿Cuáles son los cuidados posteriores al Blanqueamiento dental?</span>
-                        <i class="fa-solid" :class="selected === 8 ? 'fa-minus' : 'fa-plus'"></i>
-                    </button>
-                    <div x-show="selected === 8" class="p-4 bg-gray-50">
-                        <p class="text-xl">Para mantener los resultados óptimos, 
-                        recomendamos evitar alimentos y bebidas con alto contenido 
-                        de pigmentos, como café, té oscuro y vino, durante al menos 3 días después del procedimiento.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Gallery Section -->
-    <section class="py-8">
-        <div class="max-w-7xl mx-auto">
-            
-        </div>
-    </section>
-
-    <!-- Contact Form Section -->
-    <section class="py-16 bg-black">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <h2 class="text-xl mb-4 text-white border rounded-full px-4 py-1 inline-block">Reserva online</h2>
-                    <p class="text-white/60 mb-8 text-lg!">No esperes más y reserva en una de las mejores experiencias para renovar tu sonrisa</p>
-                    <form class="text-white">
-                        <div class="grid grid-cols-2 gap-x-3">
-                            <div class="mb-4 col-span-1">
-                                <label for="name" class="block text-base! text-zinc-300 mb-1">Nombre *</label>
-                                <input placeholder="Tu Nombre" type="text" id="name" name="name" class="w-full px-4 py-2 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 bg-white/10">
-                            </div>
-                            <div class="mb-4 col-span-1">
-                                <label for="email" class="block text-base! font-medium text-zinc-300 mb-1">Email</label>
-                                <input placeholder="Correo electrónico"  type="email" id="email" name="email" class="w-full px-4 py-2 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400  bg-white/10">
-                            </div>
+                    <div class="col-span-1">
+                        <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden mb-4">
+                            <img src="/placeholder.svg?height=400&width=400" alt="Plan Básico" class="w-full h-full object-cover">
                         </div>
+                    </div>
+                    
+            
+                    <div class="col-span-1 md:col-span-2">
+                        <p class="text-gray-600 mb-8">
+                            Nuestros planes están diseñados para adaptarse a tus necesidades específicas. Ofrecemos diferentes opciones que se ajustan a distintos presupuestos y requerimientos, garantizando siempre la máxima calidad en cada uno de nuestros servicios.
+                        </p>
                         
-                        <div class="mb-4">
-                            <label for="message" class="block text-base! text-zinc-300 mb-1">Mensaje</label>
-                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400  bg-white/10"></textarea>
+                        <div x-data="{selected:null}">
+                            <div class="mb-4">
+                                <button 
+                                    @click="selected !== 1 ? selected = 1 : selected = null"
+                                    class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
+                                >
+                                    <h3 class=" text-3xl">Pre blanqueamiento</h3>
+                                    <i class="fa-solid" :class="selected === 1 ? 'fa-minus' : 'fa-plus'"></i>
+                                </button>
+                                <div x-show="selected === 1" class="p-4 bg-gray-50">
+                                    <p>Nuestro plan inicial incluye una evaluación completa, limpieza profesional y preparación para el tratamiento Zoom de blanqueamiento. Precio: $99</p>
+                                    <ul class="mt-2 list-disc list-inside">
+                                        <li>Evaluación dental completa</li>
+                                        <li>Limpieza profesional</li>
+                                        <li>Preparación para blanqueamiento</li>
+                                        <li>Consulta personalizada</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <button 
+                                    @click="selected !== 2 ? selected = 2 : selected = null"
+                                    class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
+                                >
+                                    <span class="text-3xl">Preparación del Kit !Zoom</span>
+                                    <i class="fa-solid" :class="selected === 2 ? 'fa-minus' : 'fa-plus'"></i>
+                                </button>
+                                <div x-show="selected === 2" class="p-4 bg-gray-50">
+                                    <p>Nuestro tratamiento premium de blanqueamiento dental para resultados excepcionales y duraderos. Precio: $299</p>
+                                    <ul class="mt-2 list-disc list-inside">
+                                        <li>Tratamiento Zoom completo</li>
+                                        <li>Kit de mantenimiento para casa</li>
+                                        <li>Seguimiento personalizado</li>
+                                        <li>Garantía de resultados</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <button 
+                                    @click="selected !== 3 ? selected = 3 : selected = null"
+                                    class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
+                                >
+                                    <span class="text-3xl">Disfruta y sonrie</span>
+                                    <i class="fa-solid" :class="selected === 3 ? 'fa-minus' : 'fa-plus'"></i>
+                                </button>
+                                <div x-show="selected === 3" class="p-4 bg-gray-50">
+                                    <p>Nuestro tratamiento premium de blanqueamiento dental para resultados excepcionales y duraderos. Precio: $299</p>
+                                    <ul class="mt-2 list-disc list-inside">
+                                        <li>Tratamiento Zoom completo</li>
+                                        <li>Kit de mantenimiento para casa</li>
+                                        <li>Seguimiento personalizado</li>
+                                        <li>Garantía de resultados</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <button type="submit" class="bg-mint text-zinc-900 px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition">
-                            Enviar mensaje
-                        </button>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-       
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-black text-white pt-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                <div>
-                    <div class="text-2xl font-bold mb-4">BLANC & CO</div>
-                    <p class="text-gray-400 mb-4">
-                        Centro especializado en blanqueamiento dental y cuidado de la sonrisa en el corazón de Querétaro
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
                     </div>
                 </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Enlaces rápidos</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Inicio</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Servicios</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Sobre nosotros</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Contacto</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contacto</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-location-dot mt-1 mr-2"></i>
-                            <span class="text-gray-400">Av. de las Ciencias 2058, 76226 Juriquilla, Qro.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-phone mt-1 mr-2"></i>
-                            <span class="text-gray-400">+34 91 123 45 67</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-envelope mt-1 mr-2"></i>
-                            <span class="text-gray-400">hola@blancnco.mx</span>
-                        </li>
-                    </ul>
-                </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-                <p>&copy; 2023 BLANC & CO. Todos los derechos reservados.</p>
-            </div>
-        </div>
-        <img class="pt-12 mx-auto" src="/src/images/half_logo.svg" alt="">
-    </footer>
+        </section>
+    -->
+        <!-- Contact Section -->
+        <section class="bg-black text-white pb-16 relative ">
+            <img src="/src/images/clouds.webp"class="object-fill w-full h-full absolute  top-0"  alt="">
 
-    <!-- Add placeholder for Font Awesome -->
-    <script>
-        // Font Awesome will be added later
-        // This is just a placeholder for the icons
-        document.addEventListener('alpine:init', () => {
-            // Alpine.js initialization
-        });
-    </script>
-    <script>
-        // Animación GSAP horizontal
-        gsap.registerPlugin(ScrollTrigger);
-    
-        const sections = gsap.utils.toArray(".card");
-    
-        gsap.to(sections, {
-          xPercent: -100 * (sections.length - 1),
-          ease: "none",
-          scrollTrigger: {
-            trigger: ".scrolling-wrapper",
-            pin: true,
-            scrub: 1,
-            snap: 1 / (sections.length - 1),
-            end: () => "+=" + document.querySelector(".scrolling-wrapper").offsetWidth
-          }
-        });
-      </script>
-    
-</body>
+            <div 
+            class="absolute inset-0 bg-gradient-to-b bg-[linear-gradient(180deg,_rgba(0,0,0,0.3)_0%,_rgba(0,0,0,1)_70%)]"
+        ></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative pt-16">
+                <div class="text-left mb-12">
+                    <p class="text-sm  tracking-wider mb-2">Blanc & co</p>
+                    <h2 class="text-2xl md:text-3xl  mb-4">Centro de Blanqueamiento Dental Profesional</h2>
+                    <p class="max-w-2xl">
+                        Nos especializamos en tratamientos de blanqueamiento dental de alta calidad. Nuestro equipo de profesionales está comprometido con brindarte la mejor experiencia y resultados excepcionales. Visítanos y descubre cómo podemos transformar tu sonrisa.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <!-- Pricing Card 1 -->
+                    <div class="bg-zinc-900/60 backdrop-blur-lg bg-opacity-10 p-6 rounded-lg border border-white/10">
+                        <div class="">
+                            <div class="mb-2 text-lg uppercase tracking-wider"><i class="fa-solid fa-user"></i> Individual</div>
+                            <h3 class="text-2xl">Essential Blanc</h3>
+                            <h4 class="mb-4">Tu sonrisa en su mejor versión.</h4>
+                            <p class="text-white/60 mb-4">
+                                Nuestro plan básico incluye una sesión de blanqueamiento profesional y un kit de mantenimiento para el hogar.
+                            </p>
+                            <ul class="mb-6 space-y-2">
+                                <li class="flex items-center">
+                                    <i class="fa-solid fa-check mr-2"></i>
+                                    <span>Precio: $6,500 mxn</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fa-solid fa-check mr-2"></i>
+                                    <span>Duración: 90 minutos</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fa-solid fa-check mr-2"></i>
+                                    <span>Consulta inicial</span>
+                                </li>
+                            </ul>
+                            <button class="bg-mint text-black px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition inline-block text-lg">
+                                Reservar cita <i class="fa-sharp fa-light fa-arrow-right-long inline-block align-middle!"></i>
+                            </button>
+                        </div>
+                    
+                    </div>
+                    
+                    <!-- Pricing Card 2 -->
+                    <div class="bg-zinc-900/60 backdrop-blur-lg	 p-6 rounded-lg border border-white/10">
+                        <div class="mb-2 text-lg uppercase tracking-wider"><i class="fa-solid fa-user-group-simple"></i> En Pareja</div>
+                        <h3 class="text-2xl">Smile together</h3>
+                        <h4 class="mb-4">Juntos siempre es mejor</h4>
+
+                        <p class="text-white/60 mb-4">
+                            Nuestro plan premium incluye múltiples sesiones de blanqueamiento y un kit completo de mantenimiento.
+                        </p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fa-solid fa-check mr-2"></i>
+                                <span>Precio: $12,200 mxn</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa-solid fa-check mr-2"></i>
+                                <span>Duración: 180 minutos</span>
+                            </li>
+                        </ul>
+                        <button class="bg-mint text-black px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition inline-block text-lg">
+                            Reservar cita <i class="fa-sharp fa-light fa-arrow-right-long inline-block align-middle!"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="text-center text-xl mb-8">
+                    <span class="block">Visitanos en Instagram</span>
+                    <a class="inline-block hover:opacity-50 underline" href="https://instagram.com/blanc_andco.mx" target="_blank">@blanc_andco.mx</a>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4">
+                    <div class="aspect-square bg-zinc-900 overflow-hidden cursor-pointer">
+                        <img class="hover:opacity-50" src="/src/images/instagram/glossier.webp" alt="Blanqueamiento dental Profesional" class="w-full h-full object-cover">
+                    </div>
+                    <div class="aspect-square bg-zinc-900 overflow-hidden cursor-pointer">
+                        <img class="hover:opacity-50 " src="/src/images/instagram/new_form _to smile.webp" alt="Una nueva forma de Sonreir con seguridad" class="w-full h-full object-cover">
+                    </div>
+                    <div class="aspect-square bg-zinc-900 overflow-hidden cursor-pointer">
+                        <img class="hover:opacity-50 " src="/src/images/instagram/ready.webp" alt="Listos, Blanqueamiento dental En querétaro" class="w-full h-full object-cover">
+                    </div>
+                    <div class="aspect-square bg-zinc-900 overflow-hidden cursor-pointer">
+                        <img class="hover:opacity-50 " src="/src/images/instagram/shine_bright.webp" alt="clínica de blanqueamiento dental" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            
+        
+        </section>
+        
+
+
+    <!-- FAQ Section -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl mb-2">Preguntas frecuentes</h2>
+                    <p class="text-gray-600">Respondemos las preguntas más comunes de nuestros pacientes acerca de nuestro servicio</p>
+                </div>
+                
+                <!-- FAQ Accordion -->
+                <div class="max-w-3xl mx-auto" x-data="{selected:null}">
+                    <div class="mb-4">
+                        <button 
+                            @click="selected !== 1 ? selected = 1 : selected = null"
+                            class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
+                        >
+                            <span class="text-2xl">¿Qué utilizamos en Blanc & Co para realizar el blanqueamiento dental?</span>
+                            <i class="fa-solid" :class="selected === 1 ? 'fa-minus' : 'fa-plus'"></i>
+                        </button>
+                        <div x-show="selected === 1" class="p-4 bg-gray-50">
+                            <p class="text-xl">En Blanc & Co utilizamos la avanzada tecnología de Philips Zoom! y EMS con Biofilm Guided, garantizando resultados superiores y una limpieza profunda, efectiva y cómoda para nuestros pacientes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <button 
+                            @click="selected !== 2 ? selected = 2 : selected = null"
+                            class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
+                        >
+                            <span class="text-2xl">¿Por qué confiar en nuestro servicio de blanqueamiento dental? </span>
+                            <i class="fa-solid" :class="selected === 2 ? 'fa-minus' : 'fa-plus'"></i>
+                        </button>
+                        <div x-show="selected === 2" class="p-4 bg-gray-50">
+                            <p class="text-xl">Nuestro equipo de odontólogos e higienistas altamente capacitados se enfoca en brindar comodidad, seguridad y resultados excepcionales. Además, usamos tecnología innovadora que asegura tratamientos eficaces y satisfactorios.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <button 
+                            @click="selected !== 3 ? selected = 3 : selected = null"
+                            class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left">
+                            <span class="text-2xl">¿Es seguro el blanqueamiento dental con láser y puede dañar el esmalte dental?</span>
+                            <i class="fa-solid" :class="selected === 3 ? 'fa-minus' : 'fa-plus'"></i>
+                        </button>
+                        <div x-show="selected === 3" class="p-4 bg-gray-50">
+                            <p class="text-xl">Sí, el blanqueamiento dental con láser es un 
+                            procedimiento seguro cuando lo realiza un profesional capacitado. 
+                            Nuestros especialistas cumplen estrictos protocolos para garantizar 
+                            la comodidad, seguridad y satisfacción de cada paciente durante todo el proceso.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <button 
+                            @click="selected !== 4 ? selected = 4 : selected = null"
+                            class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
+                        >
+                            <span class="text-2xl">¿Puede dañar el esmalte dental el blanqueamiento con láser?</span>
+                            <i class="fa-solid" :class="selected === 4 ? 'fa-minus' : 'fa-plus'"></i>
+                        </button>
+                        <div x-show="selected === 4" class="p-4 bg-gray-50">
+                            <p class="text-xl"> No, el procedimiento está diseñado para ser cuidadoso y respetuoso con el 
+                            esmalte dental. Nuestros expertos utilizan equipos avanzados que protegen la integridad del esmalte, 
+                            asegurando una salud dental óptima durante y después del tratamiento.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <button 
+                            @click="selected !== 5 ? selected = 5 : selected = null"
+                            class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
+                        >
+                            <span class="text-2xl">¿Es doloroso el blanqueamiento dental con láser?</span>
+                            <i class="fa-solid" :class="selected === 5 ? 'fa-minus' : 'fa-plus'"></i>
+                        </button>
+                        <div x-show="selected === 5" class="p-4 bg-gray-50">
+                            <p class="text-xl">El procedimiento es prácticamente indoloro, aunque algunas personas podrían experimentar una leve sensibilidad temporal que desaparece rápidamente.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <button 
+                            @click="selected !== 6 ? selected = 6 : selected = null"
+                            class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
+                        >
+                            <span class="text-2xl">Quién es candidato al blanqueamiento dental con láser y qué sucede si tengo restauraciones dentales o carillas?</span>
+                            <i class="fa-solid" :class="selected === 6 ? 'fa-minus' : 'fa-plus'"></i>
+                        </button>
+                        <div x-show="selected === 6" class="p-4 bg-gray-50">
+                            <p class="text-xl">Este tratamiento es ideal para adultos con buena 
+                            salud bucal y sin enfermedades periodontales. Las restauraciones dentales 
+                            o carillas no se blanquean con el procedimiento, por lo que podría ser necesario 
+                            ajustarlas posteriormente para igualar el tono.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <button 
+                            @click="selected !== 8 ? selected = 8 : selected = null"
+                            class="flex justify-between items-center w-full p-4 border-b border-gray-200 text-left"
+                        >
+                            <span class="text-2xl">¿Cuáles son los cuidados posteriores al Blanqueamiento dental?</span>
+                            <i class="fa-solid" :class="selected === 8 ? 'fa-minus' : 'fa-plus'"></i>
+                        </button>
+                        <div x-show="selected === 8" class="p-4 bg-gray-50">
+                            <p class="text-xl">Para mantener los resultados óptimos, 
+                            recomendamos evitar alimentos y bebidas con alto contenido 
+                            de pigmentos, como café, té oscuro y vino, durante al menos 3 días después del procedimiento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Gallery Section -->
+        <section class="py-8">
+            <div class="max-w-7xl mx-auto">
+                
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="py-16 bg-black">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h2 class="text-xl mb-4 text-white border rounded-full px-4 py-1 inline-block">Reserva online</h2>
+                        <p class="text-white/60 mb-8 text-lg!">No esperes más y reserva en una de las mejores experiencias para renovar tu sonrisa</p>
+                        <form class="text-white">
+                            <div class="grid grid-cols-2 gap-x-3">
+                                <div class="mb-4 col-span-1">
+                                    <label for="name" class="block text-base! text-zinc-300 mb-1">Nombre *</label>
+                                    <input placeholder="Tu Nombre" type="text" id="name" name="name" class="w-full px-4 py-2 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 bg-white/10">
+                                </div>
+                                <div class="mb-4 col-span-1">
+                                    <label for="email" class="block text-base! font-medium text-zinc-300 mb-1">Email</label>
+                                    <input placeholder="Correo electrónico"  type="email" id="email" name="email" class="w-full px-4 py-2 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400  bg-white/10">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="message" class="block text-base! text-zinc-300 mb-1">Mensaje</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400  bg-white/10"></textarea>
+                            </div>
+                            <button type="submit" class="bg-mint text-zinc-900 px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition">
+                                Enviar mensaje
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black text-white pt-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div>
+                        <div class="text-2xl font-bold mb-4">BLANC & CO</div>
+                        <p class="text-gray-400 mb-4">
+                            Centro especializado en blanqueamiento dental y cuidado de la sonrisa en el corazón de Querétaro
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Enlaces rápidos</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white">Inicio</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Servicios</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Sobre nosotros</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Contacto</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-location-dot mt-1 mr-2"></i>
+                                <span class="text-gray-400">Av. de las Ciencias 2058, 76226 Juriquilla, Qro.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-phone mt-1 mr-2"></i>
+                                <span class="text-gray-400">+34 91 123 45 67</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-envelope mt-1 mr-2"></i>
+                                <span class="text-gray-400">hola@blancnco.mx</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                    <p>&copy; 2023 BLANC & CO. Todos los derechos reservados.</p>
+                </div>
+            </div>
+            <img class="pt-12 mx-auto" src="/src/images/half_logo.svg" alt="">
+        </footer>
+
+        <!-- Add placeholder for Font Awesome -->
+        <script>
+            // Font Awesome will be added later
+            // This is just a placeholder for the icons
+            document.addEventListener('alpine:init', () => {
+                // Alpine.js initialization
+            });
+        </script>
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+          
+            ScrollTrigger.matchMedia({
+              // Desktop: animación horizontal solo en pantallas de 768px o más
+              "(min-width: 768px)": function() {
+                const sections = gsap.utils.toArray(".card");
+          
+                gsap.to(sections, {
+                  xPercent: -100 * (sections.length - 1),
+                  ease: "none",
+                  scrollTrigger: {
+                    trigger: ".scrolling-wrapper",
+                    pin: true,
+                    scrub: 1,
+                    snap: 1 / (sections.length - 1),
+                    end: () => "+=" + document.querySelector(".scrolling-wrapper").offsetWidth,
+                  }
+                });
+              },
+              // Mobile/Tablet: para anular o dejar el comportamiento predeterminado (sin efecto horizontal)
+              "(max-width: 767px)": function() {
+                // Aquí no necesitas ninguna animación, el flujo vertical será el comportamiento natural.
+                // Opcionalmente, si hubiera alguna animación previa, podrías reiniciarla aquí.
+              }
+            });
+          </script>
+        
+    </body>
 </html>
