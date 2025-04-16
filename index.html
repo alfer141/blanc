@@ -42,11 +42,11 @@
                 <div class="flex justify-between items-center py-8">
                     <div class="text-xl font-bold"><img src="src/images/blanccco-logo.svg" alt=" Blanc & Co Logo SVG"></div>
                     <nav class="hidden md:flex space-x-8 text-lg">
-                        <a href="#" class="text-white hover:text-gray-300 ">Inicio</a>
-                        <a href="#" class="text-white hover:text-gray-300">Nosotros</a>
-                        <a href="#" class="text-white hover:text-gray-300">Productos</a>
-                        <a href="#" class="text-white hover:text-gray-300">Servicios</a>
-                        <a href="#" class="text-white hover:text-gray-300">Contacto</a>
+                        <a href="#inicio" class="text-white hover:text-gray-300 ">Inicio</a>
+                        <a href="#resultados" class="text-white hover:text-gray-300">Resultados</a>
+                        <a href="#proceso" class="text-white hover:text-gray-300">Tratamiento</a>
+                        <a href="#programas" class="text-white hover:text-gray-300">Programas</a>
+                        <a href="#contacto" class="text-white hover:text-gray-300">Contacto</a>
                     </nav>
                     <button class="md:hidden bg-mint text-black px-4 py-2 rounded-full  hover:bg-gray-200 transition ">
                         <i class="fa-brands fa-whatsapp"></i> Reservar cita <i class="fa-light fa-arrow-up-right"></i>
@@ -56,7 +56,7 @@
         </header>
 
         <!-- Hero Section -->
-        <section class="bg-black text-white relative">
+        <section class="bg-black text-white relative" id="inicio">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div class="z-10">
@@ -113,11 +113,11 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <p class="text-center text-sm text-gray-500 mb-6 text-lg">Sólo trabajamos con tecnología y marcas de primera</p>
                 <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-                    <div class=""><img src="src/images/Logos/biofilm-therapy.webp" alt=""></div>
-                    <div class=""><img src="src/images/Logos/ems-airflow.webp" alt=""></div>
-                    <div class=""><img src="src/images/Logos/ivoclar-vivadent.webp" alt=""></div>
-                    <div class=""><img src="src/images/Logos/philips-zoom.webp" alt=""></div>
-                    <div class=""><img src="src/images/Logos/relief-acp-logo.webp" alt=""></div>
+                    <div class=""><img src="src/images/Logos/biofilm-therapy.webp" alt="Biofilm Therapy" /></div>
+                    <div class=""><img src="src/images/Logos/ems-airflow.webp" alt="Limpieza dental con EMS® Airflow" /></div>
+                    <div class=""><img src="src/images/Logos/ivoclar-vivadent.webp" alt="Utilizamos IVOCLAR como insumos dentales" /></div>
+                    <div class=""><img src="src/images/Logos/philips-zoom.webp" alt="Blanqueamiento dental con Philips !Zoom" /></div>
+                    <div class=""><img src="src/images/Logos/relief-acp-logo.webp" alt="Relief des sensibilizante"/ ></div>
                 </div>
             </div>
         </section>
@@ -137,35 +137,35 @@
                 </div>
 
                 <!-- Image Gallery -->
-                <div class="flex flex-nowrap gap-x-2 overflow-x-scroll justify-start py-8">
+                <div class="flex flex-nowrap gap-x-2 overflow-x-scroll justify-start py-8" id="resultados">
                     <div class="aspect-3/4 bg-gray-200 rounded-lg overflow-hidden min-w-xs max-w-xs h-xs">
                         <img-comparison-slider>
-                            <img slot="first" src="src/images/pacientes/px_georgina_blanqueamiento_antes.webp" />
-                            <img slot="second" src="src/images/pacientes/px_georgina_blanqueamiento_despues.webp" />
+                            <img slot="first" src="src/images/pacientes/px_georgina_blanqueamiento_antes.webp" alt="Sonrisa de Georgina antes del blanqueamiento dental en Blanc & Co" />
+                            <img slot="second" src="src/images/pacientes/px_georgina_blanqueamiento_despues.webp" alt="Resultado del blanqueamiento dental de Georgina en Blanc & Co, dientes más blancos y brillantes" />
                         </img-comparison-slider>
                     </div>
                     <div class="aspect-3/4  bg-gray-200 rounded-lg overflow-hidden min-w-xs max-w-xs h-xs">
                         <img-comparison-slider>
-                            <img slot="first" src="src/images/pacientes/px_william_blanqueamiento_antes.webp" />
-                            <img slot="second" src="src/images/pacientes/px_william_blanqueamiento_desp.webp" />
+                            <img slot="first" src="src/images/pacientes/px_william_blanqueamiento_antes.webp" alt="Sonrisa de William antes del tratamiento de blanqueamiento dental" />
+                            <img slot="second" src="src/images/pacientes/px_william_blanqueamiento_desp.webp" alt="Resultado de sonrisa más blanca de William tras blanqueamiento dental" />
                         </img-comparison-slider>
                     </div>
                     <div class="aspect-3/4 bg-gray-200 rounded-lg overflow-hidden min-w-xs max-w-xs h-xs">
                         <img-comparison-slider>
-                            <img slot="first" src="src/images/pacientes/px_denisse_blanqueamiento_antes.webp" />
-                            <img slot="second" src="src/images/pacientes/px_denisse_blanqueamiento_despues.webp" />
+                            <img slot="first" src="src/images/pacientes/px_denisse_blanqueamiento_antes.webp" alt="Sonrisa de Denisse antes del blanqueamiento dental profesional en Blanc & Co" />
+                            <img slot="second" src="src/images/pacientes/px_denisse_blanqueamiento_despues.webp" alt="Dientes visiblemente más blancos de Denisse tras tratamiento" />
                         </img-comparison-slider>
                     </div>
                     <div class="aspect-3/4 bg-gray-200 rounded-lg overflow-hidden min-w-xs max-w-xs h-xs">
                         <img-comparison-slider>
-                            <img slot="first" src="src/images/pacientes/px_mujer1_blanqueamientot_antes.webp" />
-                            <img slot="second" src="src/images/pacientes/px_mujer1_blanqueamientot_desspues.webp" />
+                            <img slot="first" src="src/images/pacientes/px_mujer1_blanqueamientot_antes.webp" alt="Antes del tratamiento de blanqueamiento dental en Blanc & Co, paciente mujer" />
+                            <img slot="second" src="src/images/pacientes/px_mujer1_blanqueamientot_desspues.webp" alt="Después del tratamiento de blanqueamiento dental" />
                         </img-comparison-slider>
                     </div>
                     <div class="aspect-3/4bg-gray-200 rounded-lg overflow-hidden min-w-xs max-w-xs h-xs">
                         <img-comparison-slider>
-                            <img slot="first" src="src/images/pacientes/px_pao_blanqueamiento_antes.webp" />
-                            <img slot="second" src="src/images/pacientes/px_pao_blanqueamiento_despues.webp" />
+                            <img slot="first" src="src/images/pacientes/px_pao_blanqueamiento_antes.webp" alt="Imagen previa al tratamiento de blanqueamiento dental de Pao en Blanc & C" />
+                            <img slot="second" src="src/images/pacientes/px_pao_blanqueamiento_despues.webp" alt="Resultado del blanqueamiento dental profesional de Pao, sonrisa más blanca" />
                         </img-comparison-slider>
                     </div>
                 </div>
@@ -202,7 +202,7 @@
         </section>
 
         <!-- Video Section -->
-        <section x-data="{ openVideo: false, 
+        <section id="acerca" x-data="{ openVideo: false, 
             videoUrl: 'https://customer-o3u27h8xl72n98rq.cloudflarestream.com/de2771e0919776353fc1ebdd85582d45/iframe?poster=https%3A%2F%2Fcustomer-o3u27h8xl72n98rq.cloudflarestream.com%2Fde2771e0919776353fc1ebdd85582d45%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600', 
             pauseVideo() { 
             this.videoUrl = ''; 
@@ -269,7 +269,7 @@
         <div class="xl:pb-0 pb-16 bg-white scrolling-wrapper flex flex-col md:flex-row md:flex-nowrap overflow-x-auto md:overflow-x-hidden touch-auto">
         
             <!-- Tarjeta 1 -->
-            <div class="xl:py-0 pt-16 card flex-none w-full md:w-screen h-auto md:h-screen flex items-center justify-center border border-white">
+            <div id="proceso" class="xl:py-0 pt-16 card flex-none w-full md:w-screen h-auto md:h-screen flex items-center justify-center border border-white">
                 <div class="text-center mb-16">
                     <h2 class="text-5xl md:text-6xl font-light tracking-wider">LA EXPERIENCIA</h2>
                     <p class="text-xl text-gray-700">Nuestra única misión es iluminar tu sonrisa</p>
@@ -478,7 +478,7 @@
         </section>
     -->
         <!-- Contact Section -->
-        <section class="bg-black text-white pb-16 relative ">
+        <section id="programas" class="bg-black text-white pb-16 relative ">
             <img src="/src/images/clouds.webp"class="object-fill w-full h-full absolute  top-0"  alt="">
 
             <div 
@@ -695,7 +695,7 @@
         </section>
 
         <!-- Contact Form Section -->
-        <section class="py-16 bg-black">
+        <section id="contacto" class="py-16 bg-black">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
