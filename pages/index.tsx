@@ -7,6 +7,7 @@ import { useState, useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Main from '../home/Main';
+import PricingSection from '../home/PricingSection';
 
 // Hooks 
 import { useClickOutside } from '../hooks/useClickOutside';
@@ -295,7 +296,10 @@ export default function Home() {
         ))}
         </div>
 
-        {/* Sección Programas */}
+       
+
+      <PricingSection /> 
+ {/* Sección Programas */}
       <section id="programas" className="bg-black text-white pb-16 relative">
         <img src="/images/clouds.webp" className="object-fill w-full h-full absolute top-0" alt="" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black"></div>

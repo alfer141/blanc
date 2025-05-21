@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@awesome.me/kit-28fbec338d": "^1.0.7",
+    "@notionhq/client": "^3.0.1",
     "gsap": "^3.13.0",
     "next": "15.3.2",
     "react": "^19.0.0",
@@ -20,7 +21,9 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "tailwindcss": "^4",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.7",
     "typescript": "^5"
   }
 }

@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --text-base:1.125rem;
 }
 
 @theme inline {
@@ -11,6 +12,10 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-mint: #D6E4E9; 
+  --color-rich-black: #071515;
+  --color-slate-green:#375B5D;
+  --color-slate-green-100:#67959A;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,7 +27,8 @@
 
 body {
     
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'degular-display', Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: 'degular-display', Arial, Helvetica, sans-serif;
+    font-size: var(--text-base);
 }

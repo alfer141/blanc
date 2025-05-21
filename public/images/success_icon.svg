@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="87px" height="87px" viewBox="0 0 87 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Grupo 2</title>
+    <defs>
+        <filter x="-40.8%" y="-39.0%" width="181.6%" height="181.6%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.177695257   0 0 0 0 0.671620245   0 0 0 0 0.47610827  0 0 0 1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="78.8169723%" id="radialGradient-2">
+            <stop stop-color="#00D58B" offset="0%"></stop>
+            <stop stop-color="#01AA51" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="43.0008506%" cy="16.8131959%" fx="43.0008506%" fy="16.8131959%" r="63.1441217%" id="radialGradient-3">
+            <stop stop-color="#13ED9D" offset="0%"></stop>
+            <stop stop-color="#00CB8B" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="36.7397936%" y1="23.2397627%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#01C588" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#00AB51" offset="100%"></stop>
+        </linearGradient>
+        <path d="M28.1919831,56.3839662 C43.7619855,56.3839662 56.3839662,43.7619855 56.3839662,28.1919831 C56.3839662,12.6219808 43.7619855,0 28.1919831,0 C12.6219808,0 0,12.6219808 0,28.1919831 C0,43.7619855 12.6219808,56.3839662 28.1919831,56.3839662 Z" id="path-5"></path>
+    </defs>
+    <g id="Checkout-process-Digital-Online-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="checkout" transform="translate(-594, -148)">
+            <g id="Grupo-2" transform="translate(596, 149)">
+                <circle id="Óvalo" fill="#D4F4E5" cx="41.5" cy="41.5" r="41.5"></circle>
+                <g id="circle-check-solid-(2)" filter="url(#filter-1)" transform="translate(13.308, 13.308)" fill-rule="nonzero">
+                    <g id="Forma">
+                        <use fill="url(#radialGradient-2)" xlink:href="#path-5"></use>
+                        <use fill="url(#radialGradient-3)" xlink:href="#path-5"></use>
+                        <use fill="url(#linearGradient-4)" xlink:href="#path-5"></use>
+                    </g>
+                    <path d="M40.6361007,23.0161112 L26.5401091,37.1121028 C25.5049347,38.1472772 23.8310357,38.1472772 22.8068738,37.1121028 L15.7588781,30.064107 C14.7237037,29.0289326 14.7237037,27.3550336 15.7588781,26.3308717 C16.7940524,25.3067098 18.4679514,25.2956974 19.4921133,26.3308717 L24.6679852,31.5067436 L36.8918529,19.2718635 C37.9270273,18.2366891 39.6009263,18.2366891 40.6250882,19.2718635 C41.6492501,20.3070378 41.6602626,21.9809368 40.6250882,23.0050987 L40.6361007,23.0161112 Z" id="Trazado" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
