@@ -128,10 +128,10 @@ const bookMethodLogo: Record<string, string> = {
 
             {/* NiteWhite */}
             <div className="mb-8">
-                <label className="flex items-center justify-between border rounded-xl p-4 cursor-pointer">
-                <span>
+                <label className="flex items-center justify-between bg-gray-100 rounded-xl p-4 cursor-pointer">
+                <span className='font-medium'>
                     Añade NiteWhite +$2,100 mxn
-                    <p className="text-gray-500">No se cobrará en este paso</p>
+                    <p className="text-gray-700 font-normal text-base/5">Kit de blanqueamiento en casa, fortalece tu esmalte y potencia tus resultados.</p>
                 </span>
                 <input
                     type="checkbox"
@@ -222,7 +222,7 @@ const bookMethodLogo: Record<string, string> = {
                     <option>Querétaro</option>
                 </select>
                 </div>
-                <button type="submit" className="w-full mt-4 bg-gray-100 text-black rounded-full py-3 font-medium hover:bg-white transition">
+                <button type="submit" className=" cursor-pointer w-full mt-4 bg-mint text-black rounded-full py-3 font-medium hover:bg-white transition">
                 Confirmar datos
                 </button>
             </div>
