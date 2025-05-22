@@ -55,18 +55,7 @@ export default function Home() {
         />
         <meta name="twitter:image" content="/images/blanc_thumb.png" />
         <link rel="canonical" href="https://blancnco.mx" />
-        <link rel="icon" href="/images/favi256.ico" type="image/x-icon" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VPCJVQM752"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-VPCJVQM752');
-            `,
-          }}
-        />
+
       </Head>
 
       <Header />
