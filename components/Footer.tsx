@@ -16,7 +16,7 @@ export default function Footer() {
                   <i className="fa-brands fa-instagram"></i>
                 </a>
                 <a href="https://www.tiktok.com/@blancncomx" target="_blank" className="text-gray-400 hover:text-white">
-                  <i class="fa-brands fa-tiktok"></i>
+                  <i className="fa-brands fa-tiktok"></i>
                 </a>
               </div>
             </div>
