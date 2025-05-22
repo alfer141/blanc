@@ -2,16 +2,19 @@
 
 import Head from 'next/head';
 import { useState, useRef } from 'react';
+import Link from 'next/link';
 
 // Components
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Main from '../home/Main';
 import PricingSection from '../home/PricingSection';
+import ScrollVercelStyle from '../home/ScrollExperience';
+import dynamic from 'next/dynamic';
 
 // Hooks 
 import { useClickOutside } from '../hooks/useClickOutside';
-import { useScrollCards } from '../hooks/useScrollCards';
+
 
 const videoUrl =
   'https://customer-o3u27h8xl72n98rq.cloudflarestream.com/de2771e0919776353fc1ebdd85582d45/iframe?poster=https%3A%2F%2Fcustomer-o3u27h8xl72n98rq.cloudflarestream.com%2Fde2771e0919776353fc1ebdd85582d45%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600';
@@ -22,8 +25,9 @@ export default function Home() {
   const [openVideo, setOpenVideo] = useState(false);
   const modalRef = useRef<HTMLDivElement | null>(null);
 
+
   useClickOutside(modalRef, () => setOpenVideo(false));
-  useScrollCards()
+
 
   const [selected, setSelected] = useState<number | null>(null);
 
@@ -187,7 +191,6 @@ export default function Home() {
             </div>
         </section>
 
-
         {/* Modal */}
       {openVideo && (
         <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center px-4">
@@ -223,162 +226,18 @@ export default function Home() {
             </p>
 
             <div className="flex justify-center mt-8">
-                <a
-                href="http://wa.me/525531743044?text=Hola,%20quiero%20reservar%20una%20cita%20de%20blanqueamiento"
-                target="_blank"
-                className="text-xl border border-white rounded-full px-6 py-2 flex items-center gap-2 hover:bg-white hover:text-black transition"
-                >
+                <Link href="/reservar" className="text-xl border border-white rounded-full px-6 py-2 flex items-center gap-2 hover:bg-white hover:text-black transition">
                 Reservar cita ahora <i className="fa-light fa-arrow-right text-white"></i>
-                </a>
+                </Link>
             </div>
             </div>
         </section>
 
-        {/* Sección scroll horizontal GSAP */}
-        <div className="xl:pb-0 pb-16 bg-white scrolling-wrapper flex flex-col md:flex-row md:flex-nowrap overflow-x-auto md:overflow-x-hidden touch-auto">
-        {[
-          {
-            id: 'proceso',
-            title: 'LA EXPERIENCIA',
-            subtitle: 'Nuestra única misión es iluminar tu sonrisa',
-          },
-          {
-            img: '/images/pre_blanqueamiento.webp',
-            title: 'Antes del blanqueamiento',
-            text: 'Nuestro equipo te explicará detalladamente cada etapa del procedimiento y resolverá todas tus dudas sobre el tratamiento. Luego realizaremos una evaluación completa para verificar el estado de tus dientes y encías, detectando posibles caries u otros problemas que puedan afectar el procedimiento. Antes de iniciar el blanqueamiento, realizamos una profilaxis dental profesional con nuestra avanzada tecnología Airflow® de EMS, un método cómodo y efectivo para eliminar manchas superficiales y placa dental, asegurando resultados uniformes y potenciados.'
-          },
-          {
-            img: '/images/kit_philips_zoom.webp',
-            title: 'Preparación del Kit !Zoom',
-            text: 'Una vez completada la limpieza dental, procederemos a aplicar cuidadosamente el kit de blanqueamiento Philips Zoom!, que incluye un protector para encías, gel desensibilizante y un agente blanqueador profesional de alta calidad. Al colocar adecuadamente cada elemento, activaremos el tratamiento utilizando una luz LED fría con la tecnología especializada de Philips para garantizar resultados óptimos.'
-          },
-          {
-            img: '/images/Zoom.webp',
-            title: 'Una sonrisa más blanca en una sesión',
-            text: 'El tratamiento se realiza en ciclos cortos de 15 minutos cada uno, dependiendo de tus objetivos personales y el estado actual de tus dientes. La sesión completa generalmente dura entre 45 y 60 minutos (3 o 4 ciclos). Mientras tanto, puedes relajarte plenamente disfrutando de una experiencia estilo spa, utilizando audífonos con cancelación de ruido y ondas binaurales relajantes. También puedes complementar la experiencia con un masajeador ocular, creando un ambiente totalmente cómodo y placentero durante todo el procedimiento. Salir relajado y con tu sonrisa hasta 8 tonos más clara.'
-          },
-        ].map((step, idx) => (
-          <div
-            key={idx}
-            id={step.id || undefined}
-            className="scroll-card flex-none w-full md:w-screen h-auto md:h-screen flex items-center justify-center border border-white"
-          >
-            <div className="max-w-7xl mx-auto px-6 text-center md:text-left">
-              {step.title && (
-                <>
-                  {step.img ? (
-                    <div className="flex flex-col md:flex-row items-center gap-10">
-                      <div className="w-full md:w-1/2">
-                        <div className="aspect-square bg-gray-100 rounded-xl flex items-center justify-center">
-                          <img src={step.img} alt={`Paso ${idx + 1}`} className="object-cover" />
-                        </div>
-                      </div>
-                      <div className="w-full md:w-1/2 border-t border-gray-300 pt-6">
-                        <div className="flex items-start justify-between">
-                          <h3 className="text-4xl">{step.title}</h3>
-                          <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2L2 12h10v10l10-10H12z" />
-                          </svg>
-                        </div>
-                        <p className="mt-4 text-gray-600 leading-relaxed">{step.text}</p>
-                      </div>
-                    </div>
-                  ) : (
-                    <>
-                      <h2 className="text-5xl md:text-6xl font-light tracking-wider">{step.title}</h2>
-                      <p className="text-xl text-gray-700 text-center">{step.subtitle}</p>
-                    </>
-                  )}
-                </>
-              )}
-            </div>
-          </div>
-        ))}
-        </div>
-
        
+    <ScrollVercelStyle />
+            
 
       <PricingSection /> 
- {/* Sección Programas */}
-      <section id="programas" className="bg-black text-white pb-16 relative">
-        <img src="/images/clouds.webp" className="object-fill w-full h-full absolute top-0" alt="" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative pt-16">
-          <div className="text-left mb-12">
-            <p className="text-sm tracking-wider mb-2">Blanc & Co</p>
-            <h2 className="text-2xl md:text-3xl mb-4">Centro de Blanqueamiento Dental Profesional</h2>
-            <p className="max-w-2xl">
-              Nos especializamos en tratamientos de blanqueamiento dental de alta calidad. Nuestro equipo de profesionales está comprometido con brindarte la mejor experiencia y resultados excepcionales. Visítanos y descubre cómo podemos transformar tu sonrisa.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {/* Card 1 */}
-            <div className="bg-zinc-900/60 backdrop-blur-lg p-6 rounded-lg border border-white/10">
-              <div className="mb-2 text-lg uppercase tracking-wider">
-                <i className="fa-solid fa-user"></i> Individual
-              </div>
-              <h3 className="text-2xl">Essential Blanc</h3>
-              <h4 className="mb-4">Tu sonrisa en su mejor versión.</h4>
-              <p className="text-white/60 mb-4">
-                Nuestro plan básico incluye una sesión de blanqueamiento profesional y un kit de mantenimiento para el hogar.
-              </p>
-              <ul className="mb-6 space-y-2">
-                <li className="flex items-center"><i className="fa-solid fa-check mr-2"></i>Precio: $6,500 mxn</li>
-                <li className="flex items-center"><i className="fa-solid fa-check mr-2"></i>Duración: 90 minutos</li>
-                <li className="flex items-center"><i className="fa-solid fa-check mr-2"></i>Consulta inicial</li>
-              </ul>
-              <a href="http://wa.me/525531743044?text=Hola,%20quiero%20reservar%20una%20cita%20de%20blanqueamiento" target="_blank" className="bg-mint text-black px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition inline-block text-lg">
-                Reservar cita <i className="fa-regular fa-light fa-arrow-right-long"></i>
-              </a>
-            </div>
-
-            {/* Card 2 */}
-            <div className="bg-zinc-900/60 backdrop-blur-lg p-6 rounded-lg border border-white/10">
-              <div className="mb-2 text-lg uppercase tracking-wider">
-                <i className="fa-solid fa-user-group-simple"></i> En Pareja
-              </div>
-              <h3 className="text-2xl">Smile together</h3>
-              <h4 className="mb-4">Juntos siempre es mejor</h4>
-              <p className="text-white/60 mb-4">
-                Nuestro plan premium incluye múltiples sesiones de blanqueamiento y un kit completo de mantenimiento.
-              </p>
-              <ul className="mb-6 space-y-2">
-                <li className="flex items-center"><i className="fa-solid fa-check mr-2"></i>Precio: $12,200 mxn</li>
-                <li className="flex items-center"><i className="fa-solid fa-check mr-2"></i>Duración: 180 minutos</li>
-              </ul>
-              <a href="http://wa.me/525531743044?text=Hola,%20quiero%20reservar%20una%20cita%20de%20blanqueamiento" target="_blank" className="bg-mint text-black px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition inline-block text-lg">
-                Reservar cita <i className="fa-regular fa-light fa-arrow-right-long"></i>
-              </a>
-            </div>
-          </div>
-
-          <div className="text-center text-xl mb-8">
-            <span className="block">Visítanos en Instagram</span>
-            <a className="inline-block hover:opacity-50 underline" href="https://instagram.com/blancnco.mx" target="_blank">
-              @blanc_andco.mx
-            </a>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4">
-            {["glossier", "new_form _to smile", "ready", "shine_bright"].map((img, idx) => (
-              <a
-                key={idx}
-                href="https://instagram.com/blancnco.mx"
-                target="_blank"
-                className="aspect-square bg-zinc-900 overflow-hidden cursor-pointer"
-              >
-                <img
-                  src={`/images/instagram/${img}.webp`}
-                  alt={`Instagram Blanc & Co - ${img}`}
-                  className="w-full h-full object-cover hover:opacity-50"
-                />
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
 
         {/* FAQ Section */}
       <section className="py-16 bg-white">

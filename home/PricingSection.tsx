@@ -1,3 +1,4 @@
+import Link from 'next/link';
 export default function PricingSection() {
     return (
         <section id="precios" className="bg-black text-white py-16">
@@ -22,9 +23,9 @@ export default function PricingSection() {
                         <li className="mb-4 text-base/5">Protocolo de confort Blanc (ambiente sensorial, aromas, aromaterapia)</li>
                         <li className="mb-4 text-base/5">Kit de cuidados posteriores</li>
                     </ul>
-                    <button className="bg-mint text-black px-4 py-2 rounded-full  hover:bg-gray-300 transition">
-                    Reservar cita
-                    </button>
+                     <Link href="/reservar" className="bg-mint text-black px-4 py-2 rounded-full font-medium hover:bg-gray-300 transition">
+                        Reservar cita
+                    </Link>
                 </div>
 
                 {/* Essential Blanc (Recomendado) */}
@@ -41,9 +42,9 @@ export default function PricingSection() {
                         <li className="mb-4 text-base/5">Protocolo de confort Blanc (ambiente sensorial, aromas, aromaterapia)</li>
                         <li className="mb-4 text-base/5">Kit de cuidados posteriores</li>
                     </ul>
-                    <button className="bg-mint text-black px-4 py-2 rounded-full  hover:bg-gray-300 transition">
-                    Reservar cita
-                    </button>
+                     <Link href="/reservar" className="bg-mint text-black px-4 py-2 rounded-full font-medium hover:bg-gray-300 transition">
+                        Reservar cita
+                    </Link>
                 </div>
 
                 {/* Pure Blanc */}
@@ -57,22 +58,47 @@ export default function PricingSection() {
                     <ul className="mb-4">
                     <li className="mb-4 text-base/6">Todo lo que contiene el programa Essential Blanc + mantenimiento programado a los 6 meses con tecnología EMS Airflow®</li>
                     </ul>
-                    <button className="bg-mint text-black px-4 py-2 rounded-full hover:bg-gray-300 transition">
-                    Reservar cita
-                    </button>
+                     <Link href="/reservar" className="bg-mint text-black px-4 py-2 rounded-full font-medium hover:bg-gray-300 transition">
+                        Reservar cita
+                    </Link>
+                    
                 </div>
                 </div>
 
                 {/* Adicional */}
-                <div className="mt-8 bg-rich-black p-6 rounded-lg text-sm flex justify-between items-center">
-                    <h3 className="text-slate-green"> Añade blanqueamiento en casa <span className="font-bold text-white">NiteWhite</span><br /></h3>
-                <p className="text-white">
-                   
-                    Al reservar tu cita podrás añadir un kit de blanqueamiento en casa para mejorar y prolongar los resultados
-                </p>
-                <button className="bg-mint text-black px-4 py-2 rounded-full font-semibold hover:bg-gray-300 transition">
-                    Reservar cita
-                </button>
+                <div className="mt-8 bg-rich-black p-12 rounded-lg flex flex-wrap justify-between items-center">
+                    <div>
+                        <h3 className="text-slate-green text-2xl"> Añade blanqueamiento en casa <span className="font-bold text-white">NiteWhite</span><br /></h3>
+                        <p className="text-white">Al reservar tu cita podrás añadir un kit de blanqueamiento en 
+                        casa para mejorar y prolongar los resultados</p>
+                    </div>           
+                    <Link href="/reservar" className="bg-mint text-black px-4 py-2 rounded-full font-medium hover:bg-gray-300 transition">
+                        Reservar cita
+                    </Link>
+                </div>
+
+                <div className="text-center text-xl mt-8 py-12">
+                    <span className="block">Visítanos en Instagram</span>
+                    <a className="inline-block hover:opacity-50 underline" href="https://instagram.com/blancnco.mx" target="_blank">
+                    @blanc_andco.mx
+                    </a>
+                </div>
+
+                <div className="grid grid-cols-2 md:grid-cols-4">
+                    {["glossier", "new_form _to smile", "ready", "shine_bright"].map((img, idx) => (
+                    <a
+                        key={idx}
+                        href="https://instagram.com/blancnco.mx"
+                        target="_blank"
+                        className="aspect-square bg-zinc-900 overflow-hidden cursor-pointer"
+                    >
+                        <img
+                        src={`/images/instagram/${img}.webp`}
+                        alt={`Instagram Blanc & Co - ${img}`}
+                        className="w-full h-full object-cover hover:opacity-50"
+                        />
+                    </a>
+                    ))}
                 </div>
             </div>
         </section>

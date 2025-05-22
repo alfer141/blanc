@@ -1,4 +1,4 @@
-'use client';
+import Link from 'next/link';
 export default function Main() {
     return (
         <section className="bg-black text-white relative" id="inicio">
@@ -11,13 +11,10 @@ export default function Main() {
                     <p className="mb-4 text-gray-300 text-xl mt-4">
                     Utilizamos la más alta tecnología del mercado, incluyendo el reconocido sistema Philips Zoom, para garantizar resultados visibles desde la primera sesión y una blancura que realmente se nota.
                     </p>
-                    <a
-                    href="http://wa.me/525531743044?text=Hola,%20quiero%20reservar%20una%20cita%20de%20blanqueamiento"
-                    target="_blank"
-                    className="bg-mint text-black px-4 py-2 rounded-full hover:bg-gray-200 transition text-xl"
-                    >
+                    <Link href="/reservar" className="bg-mint text-black px-4 py-2 rounded-full hover:bg-gray-200 transition text-xl">
                     Reservar cita <i className="fa-light fa-arrow-up-right"></i>
-                    </a>
+                    </Link>
+                    
                 </div>
                 <div className="relative hidden md:block">
                     <div className="aspect-[3/4] bg-gray-700 rounded-lg overflow-hidden relative">

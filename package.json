@@ -11,7 +11,7 @@
   "dependencies": {
     "@awesome.me/kit-28fbec338d": "^1.0.7",
     "@notionhq/client": "^3.0.1",
-    "gsap": "^3.13.0",
+    "framer-motion": "^12.12.1",
     "next": "15.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
