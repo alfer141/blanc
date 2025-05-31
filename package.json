@@ -11,9 +11,12 @@
   "dependencies": {
     "@awesome.me/kit-28fbec338d": "^1.0.7",
     "@notionhq/client": "^3.0.1",
+    "@portabletext/react": "^3.2.1",
+    "@sanity/client": "^7.4.0",
     "@sanity/icons": "^3.7.0",
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.90.0",
+    "date-fns": "^4.1.0",
     "framer-motion": "^12.12.1",
     "next": "15.3.2",
     "next-sanity": "^9.12.0",
