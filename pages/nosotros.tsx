@@ -2,10 +2,11 @@
 
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 
 import Link from 'next/link';
 import Footer from "@/components/Footer"
+
 
 // Variantes de animación
 const fadeIn = {
@@ -38,13 +39,65 @@ const headerVariants = {
     },
   },
 }
+// Imágenes del carrusel
+const images = [
+  "/images/blanqueamiento-dental-queretaro.webp",
+  "/images/limpieza-dental-airflow.webp",
+  "/images/airflow-handy.webp",
+  "/images/insumos-blanqueamiento-zoom.webp",
+  "/images/aclaramiento-dental-rapido.webp",
+  "/images/gel-philips-zoom.webp",
+  "/images/dientes-mas-blancos.webp",
+  "/images/limpieza-y-blanqueamiento-dental.webp",
+  "/images/paciente-blanqueamiento-zoom.webp",
+  "/images/proceso-blanqueamiento-zoom.webp",
+  "/images/clinica-blanqueamiennto-dental.webp",
+];
+const repeatedImages = [...images, ...images];
+const ITEM_WIDTH = 440; // w-60 = 240px aprox
+const totalWidth = ITEM_WIDTH * images.length;
 
 export default function HomePage() {
-  const [activeAccordion, setActiveAccordion] = useState<string | null>(null)
+    const [activeAccordion, setActiveAccordion] = useState<string | null>(null)
+    const [openVideo, setOpenVideo] = useState(false)
+    const modalRef = useRef<HTMLDivElement | null>(null)
+
+
+  const videoUrl =
+    "https://customer-o3u27h8xl72n98rq.cloudflarestream.com/f311fe3d212682375a9c66c85524a66c/iframe?poster=https%3A%2F%2Fcustomer-o3u27h8xl72n98rq.cloudflarestream.com%2Ff311fe3d212682375a9c66c85524a66c%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
 
   const handleAccordionChange = (value: string) => {
     setActiveAccordion(activeAccordion === value ? null : value)
   }
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+        setOpenVideo(false)
+      }
+    }
+    if (openVideo) {
+      document.addEventListener("mousedown", handleClickOutside)
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [openVideo])
+
+  const images = [
+  "/images/blanqueamiento-dental-queretaro.webp",
+  "/images/limpieza-dental-airflow.webp",
+  "/images/airflow-handy.webp",
+  "/images/insumos-blanqueamiento-zoom.webp",
+  "/images/aclaramiento-dental-rapido.webp",
+  "/images/gel-philips-zoom.webp",
+  "/images/dientes-mas-blancos.webp",
+  "/images/limpieza-y-blanqueamiento-dental.webp",
+  "/images/paciente-blanqueamiento-zoom.webp",
+  "/images/proceso-blanqueamiento-zoom.webp",
+  "/images/clinica-blanqueamiennto-dental.webp"
+];
+const repeatedImages = [...images, ...images];
 
   return (
     <div className="min-h-screen bg-white">
@@ -52,9 +105,9 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <motion.h1 className="text-xl font-bold text-gray-900" whileHover={{ scale: 1.05 }}>
-                BLANC & CO.
-              </motion.h1>
+              <motion.div className="text-xl font-bold text-gray-900" whileHover={{ scale: 1.05 }}>
+                <img  src="/images/blanccco-logo-black.svg" alt="Blanc & Co" className="h-4" />
+              </motion.div>
             </div>
             <nav className="hidden md:flex space-x-8">
               {["Resultados", "Tratamientos", "Blog", "Opiniones", "Tratamientos"].map((item, index) => (
@@ -70,7 +123,7 @@ export default function HomePage() {
               ))}
             </nav>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <button className="bg-gray-100 text-gray-900 hover:bg-gray-200 border border-gray-300">Reservar</button>
+              <Link href="/reservar"  className="bg-mint text-black  px-6 py-2 rounded-full hover:bg-gray-200 ">Reservar</Link>
             </motion.div>
           </div>
         </div>
@@ -82,8 +135,7 @@ export default function HomePage() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-        variants={fadeIn}
-      >
+        variants={fadeIn} >
         <div >
           <motion.div variants={fadeIn} className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center xl:mt-12 mt-8" >
             <div>
@@ -106,8 +158,7 @@ export default function HomePage() {
               className="text-gray-600 text-lg leading-relaxed"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-            >
+              transition={{ delay: 0.6 }}>
               En Blanc & Co nos especializamos en tratamientos de blanqueamiento dental, tanto como el hogar como en
               nuestro consultorio. Somos una clínica especializada exclusivamente en blanqueamiento dental y
               tratamientos dentales estéticos. Nuestro equipo de profesionales altamente capacitados se dedica a brindar
@@ -124,11 +175,11 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
           >
             <Image
-              src="/images/dental-consultation.png"
+              src="/images/about/aboutUs_image_1.webp"
               alt="Consulta dental profesional"
-              width={600}
-              height={400}
-              className=""
+              width={1200}
+              height={600}
+              className="object-cover w-full rounded-lg shadow-lg"
             />
         </motion.div>
       </motion.section>
@@ -176,16 +227,19 @@ export default function HomePage() {
               title: "Especialización",
               description:
                 "Desarrollamos nuestro servicio al detalle todo nuestro conocimiento está enfocado en el blanqueamiento dental.",
+                icon:"fa-regular fa-bullseye"
             },
             {
               title: "Innovación",
               description:
                 "Incorporamos tecnología avanzada y métodos actualizados para transformar tu visita en una experiencia única.",
+                icon:"fa-regular fa-atom-simple"
             },
             {
               title: "Transparencia",
               description:
                 "Evaluamos tu caso de manera responsable y te explicamos todo el proceso para que tengas absoluta claridad sobre nuestros métodos.",
+                icon:"fa-regular fa-layer-group"
             },
           ].map((feature, index) => (
             <motion.div
@@ -194,8 +248,9 @@ export default function HomePage() {
               variants={fadeIn}
               whileHover={{ y: -10, transition: { duration: 0.3 } }}
             >
-              <motion.h4 className="text-xl font-semibold text-gray-900 mb-4" variants={fadeIn}>
-                {feature.title}
+              <motion.h4 className="text-2xl font-semibold text-gray-900 mb-3" variants={fadeIn}>
+                <i className={` ${feature.icon} text-mint mr-2`}></i>
+                <span>{feature.title}</span>
               </motion.h4>
               <motion.p className="text-gray-600" variants={fadeIn}>
                 {feature.description}
@@ -204,60 +259,98 @@ export default function HomePage() {
           ))}
         </motion.div>
 
-        {/* Placeholder Images */}
-        <motion.div className="grid md:grid-cols-3 gap-6" variants={staggerContainer}>
-          {[1, 2, 3].map((_, index) => (
-            <motion.div
-              key={index}
-              className="bg-gray-200 h-48 rounded-lg"
-              variants={fadeIn}
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300, damping: 10 }}
-            />
-          ))}
-        </motion.div>
+
       </motion.section>
+
+
+        {/* Carrusel infinito */}
+        <div className="overflow-hidden w-full xl:mb-12" role="region" aria-label="Galería de servicios de Blanc & Co">
+            <motion.div
+                className="flex"
+                style={{ width: totalWidth * 2 }}
+                animate={{ x: [-0, -totalWidth] }}
+                transition={{
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "linear",
+                duration: 58, // Ajusta para velocidad
+                }}
+            >
+                {repeatedImages.map((src, idx) => (
+                <img
+                    key={idx}
+                    src={src}
+                    alt={`Blanqueamiento dental Blanc & Co imagen ${idx + 1}`}
+                    className="aspect-[4/5] w-80 rounded-lg object-cover mx-2 shadow transition-transform duration-300"
+                    loading="lazy"
+                    draggable={false}
+                />
+                ))}
+            </motion.div>
+        </div>
 
     
 
-        {/* Video Section */}
-      <motion.section
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={fadeIn}
-      >
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div variants={fadeIn}>
-            <motion.h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight" variants={fadeIn}>
-              Una sonrisa brillante es sinónimo de seguridad, felicidad y confianza.
-            </motion.h3>
-            <motion.p className="text-gray-600 mb-6" variants={fadeIn}>
-              Transformamos tu visita en una experiencia relajante, acogedora y muy cómoda para ti. Cada detalle ha sido
-              diseñado cuidadosamente para que te sientas a gusto desde el momento en que ingresas a nuestras
-              instalaciones.
-            </motion.p>
-            <motion.p className="text-gray-600" variants={fadeIn}>
-              Blanc & Co profesionales de lujo en una clínica donde nuestras especialistas son expertas en
-              blanqueamiento dental y tratamientos estéticos. Nuestro equipo está conformado por un grupo de
-              profesionales que se mantienen en constante actualización para brindarte los mejores resultados con los
-              mejores y más modernos equipos y técnicas.
-            </motion.p>
-          </motion.div>
-          <motion.div className="relative" variants={fadeIn}>
-            <motion.div
-              className="bg-gray-200 h-80 rounded-lg flex items-center justify-center"
-              whileHover={{ scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300, damping: 10 }}
-            >
-              <motion.div className="text-gray-500 text-sm">[Video o imagen de reemplazo aquí]</motion.div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </motion.section>
+       {openVideo && (
+                <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center px-4">
+                <div
+                    ref={modalRef}
+                    className="relative bg-black rounded-lg overflow-hidden w-[400px] h-[710px]"
+                >
+                    <iframe
+                    src={videoUrl}
+                    loading="lazy"
+                    className="w-full h-full"
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                    allowFullScreen
+                    title="Video Blanc & Co"
+                    />
+                </div>
+                </div>
+            )}
 
-            {/* FAQ Section */}
+        {/* Video Section */}
+        <motion.section
+            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeIn}>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <motion.div variants={fadeIn}>
+                    <motion.h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight" variants={fadeIn}>
+                    Una sonrisa brillante es sinónimo de seguridad, felicidad y confianza.
+                    </motion.h3>
+                    <motion.p className="text-gray-600 mb-6" variants={fadeIn}>
+                    Transformamos tu visita en una experiencia relajante, acogedora y muy cómoda para ti. Cada detalle ha sido
+                    diseñado cuidadosamente para que te sientas a gusto desde el momento en que ingresas a nuestras
+                    instalaciones.
+                    </motion.p>
+                    <motion.p className="text-gray-600" variants={fadeIn}>
+                    Blanc & Co profesionales de lujo en una clínica donde nuestras especialistas son expertas en
+                    blanqueamiento dental y tratamientos estéticos. Nuestro equipo está conformado por un grupo de
+                    profesionales que se mantienen en constante actualización para brindarte los mejores resultados con los
+                    mejores y más modernos equipos y técnicas.
+                    </motion.p>
+                </motion.div>
+                <motion.div className="relative w-6/12 mx-auto" variants={fadeIn}>
+                    <motion.div
+                    className="bg-gray-200 aspect-[9/16] rounded-lg flex items-center justify-center cursor-pointer overflow-hidden"
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                    onClick={() => setOpenVideo(true)} >
+                    <Image
+                        src="/images/about/about_video_cover.webp"
+                        alt="Video Blanc & Co"
+                        width={450}
+                        height={801}
+                        className="object-cover w-full h-full"/>
+                    </motion.div>
+                </motion.div>
+            </div>
+        </motion.section>
+
+        {/* FAQ Section */}
       <motion.section
         className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
         initial="hidden"
@@ -357,7 +450,7 @@ export default function HomePage() {
         </motion.div>
       </motion.section>
 
-            {/* CTA Section */}
+        {/* CTA Section */}
       <motion.section
         className="bg-black text-mint py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 rounded-lg shadow-lg mb-12"
         initial="hidden"
