@@ -1,7 +1,7 @@
 import Link from 'next/link';
 export default function PricingSection() {
     return (
-        <section id="precios" className="bg-black text-white py-16">
+        <section id="tratamientos" className="bg-black text-white py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 className="text-3xl mb-4">Blanc & Co.</h2>
                 <h3 className="text-2xl font-semibold mb-8">Centro de Blanqueamiento dental profesional</h3>

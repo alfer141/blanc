@@ -58,7 +58,8 @@ export default function Home() {
 
       </Head>
 
-      <Header />
+      <Header variant='dark' />
+
       <Main />
 
         <section className="bg-white py-8">

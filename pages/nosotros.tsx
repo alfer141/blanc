@@ -1,11 +1,13 @@
 "use client"
 
+import Head from 'next/head';
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { useState, useRef, useEffect } from "react"
 
 import Link from 'next/link';
 import Footer from "@/components/Footer"
+import Header from "@/components/Header"
 
 
 // Variantes de animación
@@ -42,15 +44,15 @@ const headerVariants = {
 // Imágenes del carrusel
 const images = [
   "/images/blanqueamiento-dental-queretaro.webp",
-  "/images/limpieza-dental-airflow.webp",
-  "/images/airflow-handy.webp",
   "/images/insumos-blanqueamiento-zoom.webp",
   "/images/aclaramiento-dental-rapido.webp",
   "/images/gel-philips-zoom.webp",
   "/images/dientes-mas-blancos.webp",
+    "/images/airflow-handy.webp",
   "/images/limpieza-y-blanqueamiento-dental.webp",
   "/images/paciente-blanqueamiento-zoom.webp",
   "/images/proceso-blanqueamiento-zoom.webp",
+    "/images/limpieza-dental-airflow.webp",
   "/images/clinica-blanqueamiennto-dental.webp",
 ];
 const repeatedImages = [...images, ...images];
@@ -84,52 +86,34 @@ export default function HomePage() {
     }
   }, [openVideo])
 
-  const images = [
-  "/images/blanqueamiento-dental-queretaro.webp",
-  "/images/limpieza-dental-airflow.webp",
-  "/images/airflow-handy.webp",
-  "/images/insumos-blanqueamiento-zoom.webp",
-  "/images/aclaramiento-dental-rapido.webp",
-  "/images/gel-philips-zoom.webp",
-  "/images/dientes-mas-blancos.webp",
-  "/images/limpieza-y-blanqueamiento-dental.webp",
-  "/images/paciente-blanqueamiento-zoom.webp",
-  "/images/proceso-blanqueamiento-zoom.webp",
-  "/images/clinica-blanqueamiennto-dental.webp"
-];
+
 const repeatedImages = [...images, ...images];
 
   return (
     <div className="min-h-screen bg-white">
-       <motion.header className="border-b border-gray-200" initial="hidden" animate="visible" variants={headerVariants}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <motion.div className="text-xl font-bold text-gray-900" whileHover={{ scale: 1.05 }}>
-                <img  src="/images/blanccco-logo-black.svg" alt="Blanc & Co" className="h-4" />
-              </motion.div>
-            </div>
-            <nav className="hidden md:flex space-x-8">
-              {["Resultados", "Tratamientos", "Blog", "Opiniones", "Tratamientos"].map((item, index) => (
-                <motion.a
-                  key={index}
-                  href="#"
-                  className="text-gray-600 hover:text-gray-900"
-                  whileHover={{ scale: 1.05, color: "#000" }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                >
-                  {item}
-                </motion.a>
-              ))}
-            </nav>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Link href="/reservar"  className="bg-mint text-black  px-6 py-2 rounded-full hover:bg-gray-200 ">Reservar</Link>
-            </motion.div>
-          </div>
-        </div>
-      </motion.header>
+        <Head>
+            <title>Blanc & Co | Especialistas en Sonrisas Más Blancas y Sanas</title>
+            <meta name="description" content="Somos Blanc & Co. La única clínica especializada en blanqueamiento dental con tecnología de vanguardia. Ofrecemos una experiencia cómoda y sensorial con resultados excepcionales. ¡Reserva tu cita hoy!" />
+    
+            <meta property="og:title" content="Blanc & Co | Especialistas en Sonrisas Más Blancas y Sanas" />
+            <meta property="og:description" content="Somos Blanc & Co. La única clínica especializada en blanqueamiento dental con tecnología de vanguardia. Ofrecemos una experiencia cómoda y sensorial con resultados excepcionales. ¡Reserva tu cita hoy!"/>
+            <meta property="og:image" content="/images/blanc_thumb.png" />
+            <meta property="og:url" content="https://blancnco.mx" />
+            <meta property="og:type" content="website" />
+            <meta property="og:site_name" content="Blanc & Co." />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="Blanc & Co | Especialistas en Sonrisas Más Blancas y Sana" />
+            <meta name="twitter:description" content="Somos Blanc & Co. La única clínica especializada en blanqueamiento dental con tecnología de vanguardia. Ofrecemos una experiencia cómoda y sensorial con resultados excepcionales. ¡Reserva tu cita hoy!"
+            />
+            <meta name="twitter:image" content="/images/blanc_thumb.png" />
+            <link rel="canonical" href="https://blancnco.mx/nosotros" />
 
-            {/* Hero Section */}
+        </Head>
+
+        <Header />
+
+
+        {/* Hero Section */}
       <motion.section
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
         initial="hidden"
@@ -205,7 +189,7 @@ const repeatedImages = [...images, ...images];
         </div>
       </motion.section>
 
-            {/* Features Section */}
+    {/* Features Section */}
       <motion.section
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
         initial="hidden"
@@ -273,7 +257,7 @@ const repeatedImages = [...images, ...images];
                 repeat: Infinity,
                 repeatType: "loop",
                 ease: "linear",
-                duration: 58, // Ajusta para velocidad
+                duration: 78, // Ajusta para velocidad
                 }}
             >
                 {repeatedImages.map((src, idx) => (
@@ -281,7 +265,7 @@ const repeatedImages = [...images, ...images];
                     key={idx}
                     src={src}
                     alt={`Blanqueamiento dental Blanc & Co imagen ${idx + 1}`}
-                    className="aspect-[4/5] w-80 rounded-lg object-cover mx-2 shadow transition-transform duration-300"
+                    className="aspect-[4/5] w-96 rounded-lg object-cover mx-2 shadow transition-transform duration-300"
                     loading="lazy"
                     draggable={false}
                 />
