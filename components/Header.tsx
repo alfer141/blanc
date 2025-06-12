@@ -16,6 +16,7 @@ const navItems = [
     { label: "Resultados", href: "/#resultados" },
     { label: "Tratamientos", href: "/#tratamientos" },
     { label: "Sobre nosotros", href: "nosotros" },
+    { label: "Sucursales", href: "sucursales" },
  
 ];
 
