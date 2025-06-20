@@ -29,8 +29,9 @@ export default function BlogPostPage({ post }: Props) {
 
     <>
       <Head>
-        <title>Nombre del post | Blanc & Co.</title>
-        <meta name="description" content="Descripción SEO del post" />
+        <title>{post.title} | Blanc & Co.</title>
+        <meta name="description" content={post.excerpt || 'Descubre más sobre blanqueamiento dental y estética de la sonrisa en Blanc & Co.'} />
+        <link rel="canonical" href={`https://blancnco.mx/blog/${post.slug?.current || ''}`} />
       </Head>
 
       <main className="bg-[#FAFAFA]px-6 lg:px-12 py-16 max-w-7xl mx-auto space-y-16">

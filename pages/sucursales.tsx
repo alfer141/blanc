@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
+import Head from 'next/head';
 
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
@@ -27,6 +28,11 @@ import Header from "@/components/Header"
 
   return (
     <>
+      <Head>
+        <title>Sucursales | Blanc & Co</title>
+        <meta name="description" content="Ubica nuestras sucursales de Blanc & Co en Querétaro y CDMX. Blanqueamiento dental profesional cerca de ti." />
+        <link rel="canonical" href="https://blancnco.mx/sucursales" />
+      </Head>
       {/* Schema.org structured data */}
       <script
         type="application/ld+json"

@@ -74,22 +74,9 @@ const bookMethodLogo: Record<string, string> = {
   return (
     <>
         <Head>
-            <title>Reserva tu cita en Blanc & Co | Blanqueamiento dental premium</title>
-            <meta name="description" content="Reserva tu cita en Blanc & Co | Blanqueamiento dental premium" />
-
-            <meta property="og:title" content="Reserva tu cita en Blanc & Co | Blanqueamiento dental premium" />
-            <meta property="og:description" content="Agenda tu sesión en Blanc & Co y descubre el blanqueamiento dental más avanzado en México. El mejor y único centro especializado que te garantiza una sonrisa más blanca en una sesión sin dolor" />
-            <meta property="og:image" content="/images/blanc_thumb.png" />
-            <meta property="og:url" content="https://blancnco.mx/reservar" />
-            <meta property="og:type" content="website" />
-            <meta property="og:site_name" content="Blanc & Co." />
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content="Agenda tu sesión en Blanc & Co y descubre el blanqueamiento dental más avanzado en México. El mejor y único centro especializado que te garantiza una sonrisa más blanca en una sesión sin dolor" />
-            <meta name="twitter:description" content="Agenda tu sesión en Blanc & Co y descubre el blanqueamiento dental más avanzado en México. El mejor y único centro especializado que te garantiza una sonrisa más blanca en una sesión sin dolor" />
-            <meta name="twitter:image" content="/images/blanc_thumb.png" />
+            <title>Reservar cita | Blanc & Co</title>
+            <meta name="description" content="Reserva tu cita de blanqueamiento dental en Blanc & Co de forma fácil y rápida. Elige tu sucursal y método de pago." />
             <link rel="canonical" href="https://blancnco.mx/reservar" />
-            <link rel="icon" href="/favicon.ico" />
-
         </Head>
 
         <header className="w-full border-b border-gray-200 py-6 flex justify-center xl:mb-0 ">
